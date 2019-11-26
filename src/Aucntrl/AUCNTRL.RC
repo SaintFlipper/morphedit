@@ -1,0 +1,16 @@
+#include "aucntrl.h"
+
+DIB_SCROLLER		BITMAP "slhandle.bmp"
+DIB_UPDOWN_NORMAL BITMAP "udnorm.bmp"
+DIB_UPDOWN_UP BITMAP "udup.bmp"
+DIB_UPDOWN_DOWN BITMAP "uddn.bmp"
+
+IDB_PIN_NORMAL BITMAP "pin1.bmp"
+IDB_PIN_SELECTED	BITMAP	"pin2.bmp"
+
+
+IDB_PIN_BACKGROUND BITMAP "patchbk.bmp"
+
+
+DIB_SLIDER_BASE BITMAP "slbase.bmp"
+

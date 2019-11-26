@@ -1,0 +1,1901 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "dlgs.h"
+#include "ver.h"
+#include "version.h"
+#include "aucntrl.h"
+#include "morpheus.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+ICO_APP                 ICON    DISCARDABLE     "app.ico"
+ICO_NOTE_ON_PATCHBAY    ICON    DISCARDABLE     "nopatch.ico"
+ICO_REAL_TIME_PATCHBAY  ICON    DISCARDABLE     "rtpatch.ico"
+ICO_NAME_LIST           ICON    DISCARDABLE     "list.ico"
+ICO_PIANO               ICON    DISCARDABLE     "piano.ico"
+ICO_PRESET              ICON    DISCARDABLE     "preset.ico"
+ICO_HYPER               ICON    DISCARDABLE     "hyper.ico"
+ICO_MIDIMAP             ICON    DISCARDABLE     "midimap.ico"
+ICO_TUNING              ICON    DISCARDABLE     "tuning.ico"
+ICO_PROGRAM_MAP         ICON    DISCARDABLE     "progman.ico"
+ICO_MASTER              ICON    DISCARDABLE     "master.ico"
+ICO_APP2                ICON    DISCARDABLE     "app2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+BMP_PATCHBAY_BACKGROUND BITMAP  MOVEABLE PURE   "patchbk.bmp"
+BMP_MB_INFO             BITMAP  MOVEABLE PURE   "mbinfo.bmp"
+BMP_MB_EXCLAMATION      BITMAP  MOVEABLE PURE   "mbexclam.bmp"
+BMP_MB_QUESTION         BITMAP  MOVEABLE PURE   "mbquest.bmp"
+BMP_MB_STOP             BITMAP  MOVEABLE PURE   "mbstop.bmp"
+BMP_KEYA_UP             BITMAP  MOVEABLE PURE   "keya-u.bmp"
+BMP_KEYA_DOWN           BITMAP  MOVEABLE PURE   "keya-d.bmp"
+BMP_KEYB_UP             BITMAP  MOVEABLE PURE   "keyb-u.bmp"
+BMP_KEYB_DOWN           BITMAP  MOVEABLE PURE   "keyb-d.bmp"
+BMP_KEYC_UP             BITMAP  MOVEABLE PURE   "keyc-u.bmp"
+BMP_KEYC_DOWN           BITMAP  MOVEABLE PURE   "keyc-d.bmp"
+BMP_KEYD_UP             BITMAP  MOVEABLE PURE   "keyd-u.bmp"
+BMP_KEYD_DOWN           BITMAP  MOVEABLE PURE   "keyd-d.bmp"
+BMP_TEXTURE1            BITMAP  MOVEABLE PURE   "texture.bmp"
+BMP_EMU_LOGO            BITMAP  MOVEABLE PURE   "emulogo.bmp"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+1 VERSIONINFO
+ FILEVERSION 0,0,0,911
+ PRODUCTVERSION 0,0,0,0
+ FILEFLAGSMASK 0x0L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x10001L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "08090000"
+        BEGIN
+            VALUE "CompanyName", "Rightable Limited\0"
+            VALUE "FileDescription", "E-MU Morpheus editor for Windows\0"
+            VALUE "InternalName", "morpheus.exe\0"
+            VALUE "LegalCopyright", "Copyright (c) Rightable Ltd 1994\0"
+            VALUE "OriginalFilename", "morpheus.exe\0"
+            VALUE "ProductName", "E-MU Morpheus editor for Windows\0"
+        END
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+DLG_MIDI_OPTIONS DIALOG DISCARDABLE  134, 80, 215, 166
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "MIDI options"
+FONT 8, "Morpheus dialog"
+BEGIN
+    GROUPBOX        "Windows MIDI devices",-1,3,2,118,59
+    LTEXT           "Input",-1,8,11,21,8
+    COMBOBOX        IDC_MIDI_INPUTS_LIST,7,21,109,55,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Output",-1,7,35,25,8
+    COMBOBOX        IDC_MIDI_OUTPUTS_LIST,7,44,109,46,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Preset blocks",-1,6,74,52,8
+    EDITTEXT        IDC_PRESET_BLOCK_PATH,61,73,103,12
+    PUSHBUTTON      "Browse",IDC_BROWSE_PRESET_BLOCK_PATH,170,73,35,11
+    LTEXT           "Device ID",-1,128,7,42,8
+    COMBOBOX        IDC_DEVICE_ID,128,18,38,73,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Test keyboard",-1,3,91,161,70
+    LTEXT           "MIDI channel",-1,7,103,46,8
+    COMBOBOX        IDC_TEST_KBD_MIDI_CHAN,55,102,25,67,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Base octave",-1,83,103,43,8
+    COMBOBOX        IDC_TEST_KBD_BASE_OCTAVE,128,102,30,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "MIDI controller assignments",-1,7,117,93,8
+    LTEXT           "A",-1,7,129,9,8
+    COMBOBOX        IDC_TEST_KBD_MIDI_A,15,127,65,67,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "B",-1,85,129,9,8
+    COMBOBOX        IDC_TEST_KBD_MIDI_B,94,127,65,67,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "C",-1,7,145,9,8
+    COMBOBOX        IDC_TEST_KBD_MIDI_C,15,143,65,67,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "D",-1,85,145,9,8
+    COMBOBOX        IDC_TEST_KBD_MIDI_D,94,143,65,67,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&OK",IDOK,172,105,33,19
+    DEFPUSHBUTTON   "&Cancel",IDCANCEL,172,139,33,19
+    GROUPBOX        "Directories",-1,3,61,208,29
+END
+
+DLG_SYSEX_STATUS DIALOG DISCARDABLE  131, 143, 67, 22
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "SYSEX"
+FONT 8, "Morpheus dialog"
+BEGIN
+END
+
+DLG_MM_NAMES_LIST DIALOG DISCARDABLE  164, 146, 129, 158
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU | WS_GROUP
+CLASS "MorpheusDialog"
+FONT 7, "Morpheus dialog"
+BEGIN
+    LISTBOX         IDC_PRESETS_LIST,2,17,123,139,LBS_NOINTEGRALHEIGHT | 
+                    LBS_MULTICOLUMN | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Save",IDC_PRESET_SAVE_CHANGES,0,0,64,14
+    PUSHBUTTON      "Abandon",IDC_PRESET_ABANDON_CHANGES,64,0,66,14
+END
+
+DLG_MIDI_STATUS DIALOG DISCARDABLE  17, 187, 734, 10
+STYLE WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Idle",IDC_STATUS,45,1,97,8
+    LTEXT           "Midi status:",-1,3,1,39,8
+END
+
+DLG_ABOUT DIALOG DISCARDABLE  135, 112, 249, 133
+STYLE WS_POPUP | WS_VISIBLE
+FONT 8, "Morpheus dialog"
+BEGIN
+    CONTROL         "",-1,"Static",SS_BLACKRECT,6,9,233,82
+    LTEXT           "Morpheus / UltraProteus editor for Windows",
+                    IDC_ABOUT_NAME,94,13,126,36
+    CONTROL         "",-1,"Static",SS_BLACKRECT,6,95,140,30
+    LTEXT           "Module firmware revision :",-1,10,100,94,8
+    LTEXT           "",IDC_REVISION,108,100,30,8
+    DEFPUSHBUTTON   "&OK",IDOK,155,104,35,14
+    LTEXT           "Data card installed :",-1,10,111,94,8
+    LTEXT           "",IDC_DATA_CARD_INSTALLED,108,111,30,8
+    LTEXT           "Copyright 1994-2012, Philip White",-1,93,56,128,9
+    LTEXT           "",IDC_ABOUT_EDITOR_VERSION,94,48,102,8
+    LTEXT           "pwhite000@gmail.com",-1,93,64,138,20
+    CONTROL         "BMP_EMU_LOGO",-1,"StaticBitmap",0x0,11,14,77,73
+    CONTROL         "",-1,"Static",SS_WHITERECT,0,0,248,133
+END
+
+DLG_PATCH DIALOG DISCARDABLE  149, 136, 102, 75
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Patchcord"
+FONT 8, "Morpheus dialog"
+BEGIN
+    CONTROL         "Amount",IDC_AMOUNT,"SliderControl",0x4,73,8,17,62
+    COMBOBOX        IDC_SOURCE,10,13,49,81,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Source",-1,10,4,49,8
+    COMBOBOX        IDC_DESTINATION,10,36,49,81,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Destination",-1,10,27,49,8
+    PUSHBUTTON      "&Finished",IDOK,10,55,49,15
+END
+
+DLG_PRESET DIALOG DISCARDABLE  5, 17, 568, 411
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU | WS_GROUP
+CAPTION "Current preset"
+FONT 8, "Morpheus dialog"
+BEGIN
+    GROUPBOX        "Primary",IDC_PRIMARY_GROUPBOX,201,0,360,129
+    COMBOBOX        IDC_INSTR1_INSTRUMENT,205,20,53,150,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_INSTR1_LOW_KEY_EDITBOX,361,17,19,12,ES_READONLY
+    LTEXT           "Instrument",-1,205,10,50,8
+    LTEXT           "Low key",-1,361,7,29,8
+    EDITTEXT        IDC_INSTR1_HIGH_KEY_EDITBOX,361,40,19,12,ES_READONLY
+    LTEXT           "High key",-1,361,30,33,8
+    CONTROL         "",IDC_INSTR1_LOW_KEY_CONTROL,"UpdownControl",0x4,383,19,
+                    9,10
+    CONTROL         "",IDC_INSTR1_HIGH_KEY_CONTROL,"UpdownControl",0x4,382,
+                    41,9,10
+    CONTROL         "Coarse\ntune",IDC_INSTR1_COARSE_TUNE,"SliderControl",
+                    0x4,205,35,17,62
+    CONTROL         "Fine\ntune",IDC_INSTR1_FINE_TUNE,"SliderControl",0x4,
+                    222,35,17,62
+    CONTROL         "Key\ntrans.",IDC_INSTR1_KEY_TRANSPOSE,"SliderControl",
+                    0x4,239,35,17,62
+    CONTROL         "Dbl+\ndetune",IDC_INSTR1_DOUBLE_DETUNE,"SliderControl",
+                    0x4,256,35,17,62
+    CONTROL         "Reverse",IDC_INSTR1_REVERSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,261,9,39,12
+    CONTROL         "Non-trans",IDC_INSTR1_NON_TRANSPOSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,261,21,43,12
+    CONTROL         "Loop enable",IDC_INSTR1_LOOP_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,205,99,52,12
+    LTEXT           "Loop start high, low",-1,259,101,66,8
+    CONTROL         "Delay",IDC_INSTR1_SOUND_DELAY,"SliderControl",0x4,273,
+                    35,17,62
+    CONTROL         "Start",IDC_INSTR1_SOUND_START,"SliderControl",0x4,290,
+                    35,17,62
+    LTEXT           "Solo mode",-1,361,53,35,8
+    LTEXT           "Solo priority",-1,360,75,40,8
+    CONTROL         "Level",IDC_FILTER1_LEVEL,"SliderControl",0x4,489,64,17,
+                    62
+    COMBOBOX        IDC_FILTER1_TYPE,489,18,53,120,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Filter reverse",IDC_FILTER1_REVERSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,490,50,57,12
+    CONTROL         "Morph",IDC_FILTER1_MORPH,"SliderControl",0x4,506,64,17,
+                    62
+    CONTROL         "Freq\ntrack",IDC_FILTER1_FREQ_TRACK,"SliderControl",0x4,
+                    523,64,17,62
+    CONTROL         "Trans\n2",IDC_FILTER1_TRANS2,"SliderControl",0x4,540,64,
+                    17,62
+    LTEXT           "Filter type",-1,488,8,54,8
+    COMBOBOX        IDC_PORTAMENTO1_SHAPE,309,21,39,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Port. shape",-1,309,11,39,8
+    CONTROL         "Port.\nrate",IDC_PORTAMENTO1_RATE,"SliderControl",0x4,
+                    307,35,17,62
+    CONTROL         "Pan",IDC_PAN1_POSITION,"SliderControl",0x4,324,35,17,62
+    CONTROL         "",IDC_INSTR1_LOOP_START_HIGH,"UpdownControl",0x4,331,
+                    100,9,10
+    CONTROL         "",IDC_INSTR1_LOOP_START_LOW,"UpdownControl",0x4,341,100,
+                    9,10
+    LTEXT           "Loop length high, low",-1,259,114,70,8
+    CONTROL         "",IDC_INSTR1_LOOP_LENGTH_HIGH,"UpdownControl",0x4,331,
+                    114,9,10
+    CONTROL         "",IDC_INSTR1_LOOP_LENGTH_LOW,"UpdownControl",0x4,341,
+                    114,9,10
+    CONTROL         "",IDC_ALT_ENV1_ENVELOPE,"EnvelopeControl",0x4,401,18,85,
+                    44
+    COMBOBOX        IDC_INSTR1_SOLO_MODE_CONTROL,361,62,36,46,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_INSTR1_SOLO_PRIORITY_CONTROL,361,85,36,41,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Attack",IDC_ALT_ENV1_ATTACK,"SliderControl",0x4,401,64,
+                    17,62
+    CONTROL         "Hold",IDC_ALT_ENV1_HOLD,"SliderControl",0x4,418,64,17,
+                    62
+    CONTROL         "Decay",IDC_ALT_ENV1_DECAY,"SliderControl",0x4,435,64,17,
+                    62
+    CONTROL         "Sust.",IDC_ALT_ENV1_SUSTAIN,"SliderControl",0x4,452,64,
+                    17,62
+    CONTROL         "Rel.",IDC_ALT_ENV1_RELEASE,"SliderControl",0x4,469,64,
+                    17,62
+    CONTROL         "Alt. envelope",IDC_ALT_ENV1_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,401,7,57,9
+    GROUPBOX        "Secondary",IDC_SECONDARY_GROUPBOX,201,129,360,128
+    COMBOBOX        IDC_INSTR2_INSTRUMENT,205,150,53,150,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_INSTR2_LOW_KEY_EDITBOX,360,145,19,12,ES_READONLY
+    LTEXT           "Instrument",-1,205,139,50,8
+    LTEXT           "Low key",-1,360,135,29,8
+    EDITTEXT        IDC_INSTR2_HIGH_KEY_EDITBOX,360,168,19,12,ES_READONLY
+    LTEXT           "High key",-1,360,158,33,8
+    CONTROL         "",IDC_INSTR2_LOW_KEY_CONTROL,"UpdownControl",0x4,382,
+                    147,9,10
+    CONTROL         "",IDC_INSTR2_HIGH_KEY_CONTROL,"UpdownControl",0x4,381,
+                    169,9,10
+    CONTROL         "Reverse",IDC_INSTR2_REVERSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,261,138,39,12
+    CONTROL         "Non-trans",IDC_INSTR2_NON_TRANSPOSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,261,150,43,12
+    CONTROL         "Loop enable",IDC_INSTR2_LOOP_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,205,230,52,10
+    LTEXT           "Solo mode",-1,360,181,35,8
+    LTEXT           "Solo priority",-1,359,203,40,8
+    CONTROL         "Level",IDC_FILTER2_LEVEL,"SliderControl",0x4,489,193,17,
+                    62
+    COMBOBOX        IDC_FILTER2_TYPE,489,147,53,120,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Filter reverse",IDC_FILTER2_REVERSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,490,179,57,12
+    CONTROL         "Morph",IDC_FILTER2_MORPH,"SliderControl",0x4,506,193,17,
+                    62
+    CONTROL         "Freq\ntrack",IDC_FILTER2_FREQ_TRACK,"SliderControl",0x4,
+                    523,193,17,62
+    CONTROL         "Trans\n2",IDC_FILTER2_TRANS2,"SliderControl",0x4,540,
+                    193,17,62
+    LTEXT           "Filter type",-1,488,137,54,8
+    COMBOBOX        IDC_PORTAMENTO2_SHAPE,309,150,39,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Port. shape",-1,309,140,39,8
+    COMBOBOX        IDC_INSTR2_SOLO_MODE_CONTROL,360,190,36,46,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_INSTR2_SOLO_PRIORITY_CONTROL,360,213,36,40,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Alt. envelope",IDC_ALT_ENV2_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,401,136,57,9
+    CONTROL         "Vol",IDC_INSTR1_VOLUME,"SliderControl",0x4,341,35,17,62
+    CONTROL         "",IDC_ALT_ENV2_ENVELOPE,"EnvelopeControl",0x4,401,147,
+                    85,44
+    CONTROL         "Attack",IDC_ALT_ENV2_ATTACK,"SliderControl",0x4,401,193,
+                    17,62
+    CONTROL         "Hold",IDC_ALT_ENV2_HOLD,"SliderControl",0x4,418,193,17,
+                    62
+    CONTROL         "Decay",IDC_ALT_ENV2_DECAY,"SliderControl",0x4,435,193,
+                    17,62
+    CONTROL         "Sust.",IDC_ALT_ENV2_SUSTAIN,"SliderControl",0x4,452,193,
+                    17,62
+    CONTROL         "Rel.",IDC_ALT_ENV2_RELEASE,"SliderControl",0x4,469,193,
+                    17,62
+    CONTROL         "Coarse\ntune",IDC_INSTR2_COARSE_TUNE,"SliderControl",
+                    0x4,205,165,17,62
+    CONTROL         "Fine\ntune",IDC_INSTR2_FINE_TUNE,"SliderControl",0x4,
+                    222,165,17,62
+    CONTROL         "Key\ntrans.",IDC_INSTR2_KEY_TRANSPOSE,"SliderControl",
+                    0x4,239,165,17,62
+    CONTROL         "Dbl+\ndetune",IDC_INSTR2_DOUBLE_DETUNE,"SliderControl",
+                    0x4,256,165,17,62
+    CONTROL         "Delay",IDC_INSTR2_SOUND_DELAY,"SliderControl",0x4,273,
+                    165,17,62
+    CONTROL         "Start",IDC_INSTR2_SOUND_START,"SliderControl",0x4,290,
+                    165,17,62
+    CONTROL         "Port.\nrate",IDC_PORTAMENTO2_RATE,"SliderControl",0x4,
+                    307,165,17,62
+    CONTROL         "Pan",IDC_PAN2_POSITION,"SliderControl",0x4,324,165,17,
+                    62
+    CONTROL         "Vol",IDC_INSTR2_VOLUME,"SliderControl",0x4,341,165,17,
+                    62
+    COMBOBOX        IDC_MISC_MIX_SELECT,111,3,42,48,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Mix bus",-1,80,5,25,8
+    EDITTEXT        IDC_MISC_PRESET_NAME,25,3,51,12,ES_AUTOHSCROLL
+    LTEXT           "Name",-1,3,5,20,8
+    EDITTEXT        IDC_KBD_LOW_KEY_EDITBOX,7,37,19,12,ES_READONLY
+    LTEXT           "Low key",-1,7,27,29,8
+    EDITTEXT        IDC_KBD_HIGH_KEY_EDITBOX,39,37,19,12,ES_READONLY
+    LTEXT           "High key",-1,39,27,33,8
+    CONTROL         "",IDC_KBD_LOW_KEY,"UpdownControl",0x4,28,39,9,10
+    CONTROL         "",IDC_KBD_HIGH_KEY,"UpdownControl",0x4,60,38,9,10
+    EDITTEXT        IDC_KBD_CENTRE_EDITBOX,72,37,19,12,ES_READONLY
+    LTEXT           "Centre",-1,72,28,33,8
+    CONTROL         "",IDC_KBD_CENTRE,"UpdownControl",0x4,93,38,9,10
+    GROUPBOX        "Keyboard",-1,3,16,161,60
+    COMBOBOX        IDC_MISC_FOOTSWITCH1_CONTROL,12,242,44,46,
+                    CBS_DROPDOWNLIST | CBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "1",-1,5,244,6,8
+    COMBOBOX        IDC_MISC_FOOTSWITCH2_CONTROL,69,242,44,46,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MISC_FOOTSWITCH3_CONTROL,129,242,44,46,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "MIDI controllers",-1,89,77,76,78
+    GROUPBOX        "Footswitches",-1,3,230,196,27
+    LTEXT           "2",-1,62,244,6,8
+    LTEXT           "3",-1,122,243,6,8
+    EDITTEXT        IDC_XFADE_SWITCH_POINT_EDITBOX,6,117,32,12,ES_READONLY
+    LTEXT           "Switch point",-1,6,108,42,8
+    CONTROL         "",IDC_XFADE_SWITCH_POINT_CONTROL,"UpdownControl",0x4,40,
+                    119,9,10
+    COMBOBOX        IDC_XFADE_MODE,6,95,41,37,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Mode",-1,7,86,25,8
+    COMBOBOX        IDC_XFADE_DIRECTION,6,139,41,33,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Direction",-1,6,130,35,8
+    GROUPBOX        "Cross-fade",-1,3,77,85,78
+    CONTROL         "A amt.",IDC_MISC_MIDI_A_AMOUNT,"SliderControl",0x4,92,
+                    89,17,62
+    CONTROL         "B amt.",IDC_MISC_MIDI_B_AMOUNT,"SliderControl",0x4,110,
+                    89,17,62
+    CONTROL         "C amt.",IDC_MISC_MIDI_C_AMOUNT,"SliderControl",0x4,128,
+                    89,17,62
+    CONTROL         "D amt.",IDC_MISC_MIDI_D_AMOUNT,"SliderControl",0x4,146,
+                    89,17,62
+    CONTROL         "Bal.",IDC_XFADE_BALANCE,"SliderControl",0x4,50,89,17,62
+    CONTROL         "Amount",IDC_XFADE_AMOUNT,"SliderControl",0x4,68,89,17,
+                    62
+    COMBOBOX        IDC_LFO1_SHAPE,517,276,41,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Shape",-1,516,267,21,8
+    GROUPBOX        "LFO1",-1,440,257,121,76
+    COMBOBOX        IDC_LFO2_SHAPE,517,351,41,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Shape",-1,516,342,21,8
+    GROUPBOX        "LFO2",-1,440,332,121,76
+    CONTROL         "Rate",IDC_LFO1_RATE,"SliderControl",0x4,442,268,17,62
+    CONTROL         "Delay",IDC_LFO1_DELAY,"SliderControl",0x4,461,268,17,62
+    CONTROL         "Var.",IDC_LFO1_VARIATION,"SliderControl",0x4,479,268,17,
+                    62
+    CONTROL         "Amount",IDC_LFO1_AMOUNT,"SliderControl",0x4,497,268,17,
+                    62
+    CONTROL         "Rate",IDC_LFO2_RATE,"SliderControl",0x4,443,343,17,62
+    CONTROL         "Delay",IDC_LFO2_DELAY,"SliderControl",0x4,461,343,17,62
+    CONTROL         "Var.",IDC_LFO2_VARIATION,"SliderControl",0x4,479,343,17,
+                    62
+    CONTROL         "Amount",IDC_LFO2_AMOUNT,"SliderControl",0x4,497,343,17,
+                    62
+    CONTROL         "",IDC_AUX_ENV_ENVELOPE,"EnvelopeControl",0x4,131,165,64,
+                    63
+    GROUPBOX        "Auxiliary envelope",IDC_AUX_ENV_GROUPBOX,2,156,197,75
+    CONTROL         "Delay",IDC_AUX_ENV_DELAY,"SliderControl",0x4,23,166,17,
+                    62
+    CONTROL         "Attack",IDC_AUX_ENV_ATTACK,"SliderControl",0x4,42,166,
+                    17,62
+    CONTROL         "Hold",IDC_AUX_ENV_HOLD,"SliderControl",0x4,59,166,17,62
+    CONTROL         "Decay",IDC_AUX_ENV_DECAY,"SliderControl",0x4,76,166,17,
+                    62
+    CONTROL         "Sust.",IDC_AUX_ENV_SUSTAIN,"SliderControl",0x4,93,166,
+                    17,62
+    CONTROL         "Rel.",IDC_AUX_ENV_RELEASE,"SliderControl",0x4,111,166,
+                    17,62
+    CONTROL         "Amount",IDC_AUX_ENV_AMOUNT,"SliderControl",0x4,5,166,17,
+                    62
+    LISTBOX         IDC_FG1_LISTBOX,26,277,187,65,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    GROUPBOX        "Function generator 1",IDC_FG1_GROUPBOX,3,257,213,89
+    LISTBOX         IDC_FG2_LISTBOX,242,276,192,66,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    GROUPBOX        "Function generator 2",IDC_FG2_GROUPBOX,218,257,219,89
+    LTEXT           "Level",IDC_FG1_LB_LABEL2,39,266,19,8
+    LTEXT           "Time",IDC_FG1_LB_LABEL3,64,266,16,8
+    LTEXT           "Shape",IDC_FG1_LB_LABEL4,87,266,21,8
+    LTEXT           "Cond.jump",IDC_FG1_LB_LABEL5,121,266,34,8
+    LTEXT           "Val.",IDC_FG1_LB_LABEL6,169,266,14,8
+    LTEXT           "->seg",IDC_FG1_LB_LABEL7,190,266,21,8
+    LTEXT           "Level",IDC_FG2_LB_LABEL2,255,266,19,8
+    LTEXT           "Time",IDC_FG2_LB_LABEL3,279,266,16,8
+    LTEXT           "Shape",IDC_FG2_LB_LABEL4,302,266,21,8
+    LTEXT           "Cond.jump",IDC_FG2_LB_LABEL5,336,266,34,8
+    LTEXT           "Val.",IDC_FG2_LB_LABEL6,384,266,13,8
+    LTEXT           "->seg",IDC_FG2_LB_LABEL7,407,266,21,8
+    CONTROL         "Amount",IDC_FG1_AMOUNT,"SliderControl",0x4,6,278,17,62
+    CONTROL         "Amount",IDC_FG2_AMOUNT,"SliderControl",0x4,221,278,17,
+                    62
+    LTEXT           "Seg.",IDC_FG1_LB_LABEL1,24,266,15,8
+    LTEXT           "Seg.",IDC_FG2_LB_LABEL1,240,266,15,8
+    COMBOBOX        IDC_KBD_VELOCITY_CURVE,129,59,32,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Vel. curve",-1,129,50,34,8
+    COMBOBOX        IDC_KBD_TUNING,7,60,41,60,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Tuning",-1,6,51,28,8
+    EDITTEXT        IDC_KBD_BEND_RANGE_VALUE,52,60,26,12,ES_READONLY
+    CONTROL         "",IDC_KBD_BEND_RANGE,"UpdownControl",0x4,80,61,9,10
+    EDITTEXT        IDC_KBD_PRESSURE_AMOUNT_VALUE,92,60,24,12,ES_READONLY
+    CONTROL         "",IDC_KBD_PRESSURE_AMOUNT,"UpdownControl",0x4,118,61,9,
+                    10
+    LTEXT           "Pressure amt.",-1,91,50,37,8
+    LTEXT           "Bend range",-1,51,50,39,8
+    COMBOBOX        IDC_PORTAMENTO_MODE,105,37,51,52,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Portamento mode",-1,104,28,58,8
+    EDITTEXT        IDC_INSTR1_LOOP_START_HIGH_VALUE,352,99,22,12,ES_RIGHT
+    EDITTEXT        IDC_INSTR1_LOOP_LENGTH_LOW_VALUE,376,113,22,12,ES_RIGHT
+    EDITTEXT        IDC_INSTR1_LOOP_START_LOW_VALUE,376,99,22,12,ES_RIGHT
+    EDITTEXT        IDC_INSTR1_LOOP_LENGTH_HIGH_VALUE,352,113,22,12,ES_RIGHT
+    LTEXT           "Loop start high, low",-1,259,231,66,8
+    CONTROL         "",IDC_INSTR2_LOOP_START_HIGH,"UpdownControl",0x4,331,
+                    230,9,10
+    CONTROL         "",IDC_INSTR2_LOOP_START_LOW,"UpdownControl",0x4,341,230,
+                    9,10
+    LTEXT           "Loop length high, low",-1,259,244,70,8
+    CONTROL         "",IDC_INSTR2_LOOP_LENGTH_HIGH,"UpdownControl",0x4,331,
+                    244,9,10
+    CONTROL         "",IDC_INSTR2_LOOP_LENGTH_LOW,"UpdownControl",0x4,341,
+                    244,9,10
+    EDITTEXT        IDC_INSTR2_LOOP_START_HIGH_VALUE,352,229,22,12,ES_RIGHT
+    EDITTEXT        IDC_INSTR2_LOOP_LENGTH_LOW_VALUE,376,243,22,12,ES_RIGHT
+    EDITTEXT        IDC_INSTR2_LOOP_START_LOW_VALUE,376,229,22,12,ES_RIGHT
+    EDITTEXT        IDC_INSTR2_LOOP_LENGTH_HIGH_VALUE,352,243,22,12,ES_RIGHT
+END
+
+DLG_FG_EDIT DIALOG DISCARDABLE  117, 122, 233, 77
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 8, "Morpheus dialog"
+BEGIN
+    CONTROL         "Level",IDC_FG_LEVEL,"SliderControl",0x4,4,6,20,62
+    CONTROL         "Time",IDC_FG_TIME,"SliderControl",0x4,84,6,20,62
+    COMBOBOX        IDC_FG_SHAPE,109,13,60,94,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Segment shape",-1,109,3,53,8
+    COMBOBOX        IDC_FG_COND_JUMP,109,37,60,94,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Jump condition",-1,109,27,55,8
+    CONTROL         "Cond.\nval.",IDC_FG_COND_VAL,"SliderControl",0x4,173,7,
+                    20,62
+    EDITTEXT        IDC_FG_COND_SEG_VALUE,109,60,19,12,ES_READONLY
+    LTEXT           "Jump destination",-1,109,51,57,8
+    CONTROL         "",IDC_FG_COND_SEG,"UpdownControl",0x4,131,61,9,10
+    DEFPUSHBUTTON   "&Finished",IDOK,197,27,30,19
+    CONTROL         "Absolute",IDC_FG_LEVEL_TYPE_0,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,26,6,41,12
+    CONTROL         "Delta",IDC_FG_LEVEL_TYPE_1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,26,18,41,12
+    CONTROL         "Random",IDC_FG_LEVEL_TYPE_2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,26,30,41,12
+    CONTROL         "Random delta",IDC_FG_LEVEL_TYPE_3,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,26,42,55,12
+END
+
+DLG_HYPERPRESET DIALOG DISCARDABLE  86, 106, 372, 242
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU | WS_GROUP
+CAPTION "Current Hyperpreset"
+CLASS "MorpheusDialog"
+FONT 8, "Morpheus dialog"
+BEGIN
+    EDITTEXT        IDC_HYPER_NAME,27,9,60,12,ES_AUTOHSCROLL
+    LTEXT           "Name",-1,5,11,20,8
+    COMBOBOX        IDC_HYPER_PORT_MODE,5,35,51,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Portamento mode",-1,5,25,64,8
+    LISTBOX         IDC_HYPER_FG_LISTBOX,116,19,250,67,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    GROUPBOX        "Free running function generator",-1,112,-1,258,91
+    LTEXT           "Level",IDC_HYPER_FG_LB_LABEL2,136,9,19,8
+    LTEXT           "Time",IDC_HYPER_FG_LB_LABEL3,161,9,16,8
+    LTEXT           "Shape",IDC_HYPER_FG_LB_LABEL4,185,9,21,8
+    LTEXT           "Cond.jump",IDC_HYPER_FG_LB_LABEL5,217,9,34,8
+    LTEXT           "Cond.val",IDC_HYPER_FG_LB_LABEL6,288,9,32,8
+    LTEXT           "Cond.seg",IDC_HYPER_FG_LB_LABEL7,327,9,31,8
+    LTEXT           "Seg.",IDC_HYPER_FG_LB_LABEL1,116,9,15,8
+    LISTBOX         IDC_HYPER_ZONE_LISTBOX,7,106,359,129,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    GROUPBOX        "Zones",-1,3,88,367,152
+    LTEXT           "Preset",IDC_HYPER_ZONE_LB_LABEL2,27,96,21,8
+    LTEXT           "Vol.",IDC_HYPER_ZONE_LB_LABEL3,78,96,15,8
+    LTEXT           "Pan",IDC_HYPER_ZONE_LB_LABEL4,95,96,16,8
+    LTEXT           "Low key",IDC_HYPER_ZONE_LB_LABEL5,113,96,29,8
+    LTEXT           "Zone",IDC_HYPER_ZONE_LB_LABEL1,7,96,17,8
+    LTEXT           "High key",IDC_HYPER_ZONE_LB_LABEL6,147,96,32,8
+    LTEXT           "Low vel.",IDC_HYPER_ZONE_LB_LABEL7,180,96,29,8
+    LTEXT           "High vel.",IDC_HYPER_ZONE_LB_LABEL8,213,96,31,8
+    LTEXT           "Vel.offset",IDC_HYPER_ZONE_LB_LABEL9,247,96,31,8
+    LTEXT           "Xpose",IDC_HYPER_ZONE_LB_LABEL10,285,96,24,8
+    LTEXT           "C.tune",IDC_HYPER_ZONE_LB_LABEL11,309,96,24,8
+    LTEXT           "F.tune",IDC_HYPER_ZONE_LB_LABEL12,335,96,24,8
+END
+
+DLG_ZONE DIALOG DISCARDABLE  143, 118, 298, 74
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Zone definition"
+FONT 8, "Morpheus dialog"
+BEGIN
+    COMBOBOX        IDC_ZONE_PRESET,4,11,84,100,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Preset",-1,4,2,33,8
+    CONTROL         "Vol.",IDC_ZONE_VOLUME,"SliderControl",0x4,93,9,20,62
+    CONTROL         "Pan",IDC_ZONE_PAN,"SliderControl",0x4,114,9,20,62
+    EDITTEXT        IDC_ZONE_LOW_KEY_EDITBOX,4,36,19,12,ES_READONLY
+    LTEXT           "Low key",-1,4,27,29,8
+    EDITTEXT        IDC_ZONE_HIGH_KEY_EDITBOX,40,36,19,12,ES_READONLY
+    LTEXT           "High key",-1,40,27,33,8
+    CONTROL         "",IDC_ZONE_LOW_KEY,"UpdownControl",0x4,25,38,9,10
+    CONTROL         "",IDC_ZONE_HIGH_KEY,"UpdownControl",0x4,61,38,9,10
+    CONTROL         "Xpose",IDC_ZONE_XPOSE,"SliderControl",0x4,198,9,20,62
+    CONTROL         "Coarse\ntune",IDC_ZONE_COARSE_TUNE,"SliderControl",0x4,
+                    219,9,20,62
+    CONTROL         "Fine\ntune",IDC_ZONE_FINE_TUNE,"SliderControl",0x4,240,
+                    9,20,62
+    PUSHBUTTON      "&Finished",IDOK,263,28,31,20
+    CONTROL         "Vel.\nLow",IDC_ZONE_LOW_VELOCITY,"SliderControl",0x4,
+                    135,9,20,62
+    CONTROL         "Vel.\nHigh",IDC_ZONE_HIGH_VELOCITY,"SliderControl",0x4,
+                    156,9,20,62
+    CONTROL         "Vel.\noff.",IDC_ZONE_VELOCITY_OFFSET,"SliderControl",
+                    0x4,177,9,20,62
+END
+
+DLG_PATCH_SLIDER DIALOG DISCARDABLE  180, 135, 21, 89
+STYLE WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 8, "Morpheus dialog"
+BEGIN
+    CONTROL         "Level",IDC_PATCH_LEVEL,"SliderControl",0x4,0,0,21,62
+    DEFPUSHBUTTON   "&OK",IDOK,0,62,21,13
+    PUSHBUTTON      "&Del",IDC_DELETE,0,75,21,13
+END
+
+DLG_MESSAGE_BOX DIALOG DISCARDABLE  152, 159, 241, 95
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 8, "Morpheus dialog"
+BEGIN
+    CONTROL         "",-1,"Static",SS_BLACKRECT,4,3,187,89
+    PUSHBUTTON      "Button1",IDC_MESSAGE_BUTTON1,195,47,42,14
+    PUSHBUTTON      "Button2",IDC_MESSAGE_BUTTON2,195,63,42,14
+    PUSHBUTTON      "Button3",IDC_MESSAGE_BUTTON3,195,79,42,14
+    CONTROL         "",IDC_MESSAGE_BITMAP,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    197,3,37,40
+    LTEXT           "",IDC_MESSAGE_TEXT,5,4,184,86
+END
+
+DLG_MIDIMAP DIALOG DISCARDABLE  77, 119, 365, 237
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU | WS_GROUP
+CAPTION "Current midimap"
+CLASS "MorpheusDialog"
+FONT 8, "Morpheus dialog"
+BEGIN
+    EDITTEXT        IDC_MM_NAME,30,3,46,12
+    LTEXT           "Name",-1,8,5,19,8
+    LISTBOX         IDC_MM_CHANNEL_LISTBOX,184,25,174,129,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    GROUPBOX        "Channels",-1,180,4,182,154
+    LTEXT           "Program",IDC_MM_CHANNEL_LISTBOX_LABEL2,206,15,31,8
+    LTEXT           "Bank",IDC_MM_CHANNEL_LISTBOX_LABEL3,270,15,19,8
+    LTEXT           "Vol.",IDC_MM_CHANNEL_LISTBOX_LABEL4,292,15,14,8
+    LTEXT           "Pan",IDC_MM_CHANNEL_LISTBOX_LABEL5,309,15,16,8
+    LTEXT           "Mix bus",IDC_MM_CHANNEL_LISTBOX_LABEL6,328,15,28,8
+    LTEXT           "Program map",-1,80,6,46,8
+    COMBOBOX        IDC_MM_PROGRAM_MAP,125,3,43,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MM_FXA_PARAM1,"SliderControl",0x4,14,40,19,62
+    CONTROL         "",IDC_MM_FXA_PARAM2,"SliderControl",0x4,32,40,19,62
+    CONTROL         "",IDC_MM_FXA_PARAM3,"SliderControl",0x4,50,40,19,62
+    CONTROL         "",IDC_MM_FXA_PARAM4,"SliderControl",0x4,68,40,19,62
+    CONTROL         "",IDC_MM_FXA_PARAM5,"SliderControl",0x4,86,40,19,62
+    CONTROL         "",IDC_MM_FXA_PARAM6,"SliderControl",0x4,104,40,19,62
+    LTEXT           "Type",-1,10,28,21,8
+    COMBOBOX        IDC_MM_FXA_TYPE,35,25,60,80,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",IDC_MM_FXA_PARAM1_NAME,6,104,38,8
+    LTEXT           "",IDC_MM_FXA_PARAM2_NAME,24,114,38,8
+    LTEXT           "",IDC_MM_FXA_PARAM3_NAME,42,104,38,8
+    CTEXT           "",IDC_MM_FXA_PARAM4_NAME,60,114,38,8
+    CTEXT           "",IDC_MM_FXA_PARAM5_NAME,78,104,38,8
+    CTEXT           "",IDC_MM_FXA_PARAM6_NAME,96,114,38,8
+    GROUPBOX        "Effect A",-1,3,16,174,109
+    LTEXT           "Type",-1,11,137,21,8
+    COMBOBOX        IDC_MM_FXB_TYPE,36,134,58,80,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Effect B",-1,3,125,174,110
+    CONTROL         "FXA\namt.",IDC_MM_FXA_AMOUNT,"SliderControl",0x4,136,40,
+                    19,62
+    CONTROL         "FXB\namt.",IDC_MM_FXB_AMOUNT,"SliderControl",0x4,136,
+                    149,19,62
+    CONTROL         "B->A\namt.",IDC_MM_B_TO_A_AMOUNT,"SliderControl",0x4,
+                    156,149,19,62
+    LTEXT           "Bus",-1,98,138,15,8
+    COMBOBOX        IDC_MM_FXB_BUS,116,134,43,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Bus",-1,98,29,15,8
+    COMBOBOX        IDC_MM_FXA_BUS,116,25,43,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Chan",IDC_MM_CHANNEL_LISTBOX_LABEL1,184,15,18,8
+    CONTROL         "",IDC_MM_FXB_PARAM1,"SliderControl",0x4,16,149,19,62
+    CONTROL         "",IDC_MM_FXB_PARAM2,"SliderControl",0x4,34,149,19,62
+    CONTROL         "",IDC_MM_FXB_PARAM3,"SliderControl",0x4,52,149,19,62
+    CONTROL         "",IDC_MM_FXB_PARAM4,"SliderControl",0x4,70,149,19,62
+    CONTROL         "",IDC_MM_FXB_PARAM5,"SliderControl",0x4,88,149,19,62
+    CONTROL         "",IDC_MM_FXB_PARAM6,"SliderControl",0x4,106,149,19,62
+    CTEXT           "",IDC_MM_FXB_PARAM1_NAME,8,213,38,8
+    CTEXT           "",IDC_MM_FXB_PARAM2_NAME,24,223,38,8
+    CTEXT           "",IDC_MM_FXB_PARAM3_NAME,42,213,38,8
+    CTEXT           "",IDC_MM_FXB_PARAM4_NAME,62,223,38,8
+    CTEXT           "",IDC_MM_FXB_PARAM5_NAME,80,213,38,8
+    CTEXT           "",IDC_MM_FXB_PARAM6_NAME,98,223,38,8
+END
+
+DLG_NAMES_LIST DIALOG DISCARDABLE  106, 53, 136, 241
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU | WS_GROUP
+CLASS "MorpheusDialog"
+FONT 7, "Morpheus dialog"
+BEGIN
+    LISTBOX         IDC_PRESETS_LIST,3,18,129,221,LBS_NOINTEGRALHEIGHT | 
+                    LBS_MULTICOLUMN | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Save changes",IDC_PRESET_SAVE_CHANGES,0,0,68,14
+    PUSHBUTTON      "Abandon changes",IDC_PRESET_ABANDON_CHANGES,68,0,68,14
+END
+
+DLG_MM_CHANNEL DIALOG DISCARDABLE  90, 127, 315, 113
+STYLE WS_POPUP | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CAPTION
+CAPTION "Midimap channel"
+FONT 8, "Morpheus dialog"
+BEGIN
+    COMBOBOX        IDC_MM_CHANNEL_PROGRAM,4,14,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Preset/Hyperpreset",-1,4,4,66,8
+    COMBOBOX        IDC_MM_CHANNEL_BANK,4,37,49,42,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Bank",-1,4,28,16,8
+    CONTROL         "Vol.",IDC_MM_CHANNEL_VOLUME,"SliderControl",0x4,74,29,
+                    19,62
+    CONTROL         "Pan",IDC_MM_CHANNEL_PAN,"SliderControl",0x4,94,29,19,62
+    COMBOBOX        IDC_MM_CHANNEL_MIX_BUS,4,61,49,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Mix bus",-1,4,52,36,8
+    CONTROL         "All messages",IDC_MM_CHANNEL_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,120,14,56,12
+    CONTROL         "Program change",IDC_MM_CHANNEL_PROGCHG_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,120,26,62,12
+    CONTROL         "Bank change",IDC_MM_CHANNEL_BANKCHG_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,120,38,56,12
+    CONTROL         "Volume",IDC_MM_CHANNEL_VOLCTL_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,120,50,44,12
+    CONTROL         "Pan",IDC_MM_CHANNEL_PANCTL_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,120,62,32,12
+    CONTROL         "Pitchwheel",IDC_MM_CHANNEL_PWHL_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,120,74,48,12
+    CONTROL         "Mono pressure",IDC_MM_CHANNEL_MPRESS_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,188,26,62,12
+    CONTROL         "Poly pressure",IDC_MM_CHANNEL_PPRESS_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,188,38,62,12
+    CONTROL         "Controller A",IDC_MM_CHANNEL_CTLA_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,256,38,52,12
+    CONTROL         "Footswitch 1",IDC_MM_CHANNEL_FTSW1_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,188,50,62,12
+    CONTROL         "Footswitch 2",IDC_MM_CHANNEL_FTSW2_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,188,62,62,12
+    CONTROL         "Footswitch 3",IDC_MM_CHANNEL_FTSW3_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,188,74,62,12
+    CONTROL         "Controller B",IDC_MM_CHANNEL_CTLB_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,256,50,52,12
+    CONTROL         "Controller C",IDC_MM_CHANNEL_CTLC_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,256,62,52,12
+    CONTROL         "Controller D",IDC_MM_CHANNEL_CTLD_ENBL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,256,74,52,12
+    GROUPBOX        "MIDI enables",-1,114,1,196,90
+    DEFPUSHBUTTON   "&Finished",IDOK,132,94,38,16
+END
+
+DLG_LONG_OPERATION DIALOG DISCARDABLE  191, 158, 142, 82
+STYLE WS_CHILD | WS_VISIBLE | WS_DLGFRAME
+FONT 8, "Morpheus dialog"
+BEGIN
+    CONTROL         "",-1,"Static",SS_BLACKRECT,2,2,138,54
+    LTEXT           "",IDC_MESSAGE_TEXT,4,4,134,48
+    PUSHBUTTON      "Abort",IDABORT,54,62,34,14
+END
+
+DLG_MASTER_SETTINGS DIALOG DISCARDABLE  49, 95, 361, 176
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU | WS_GROUP
+CAPTION "Master settings"
+CLASS "MorpheusDialog"
+FONT 8, "Morpheus dialog"
+BEGIN
+    CONTROL         "Tune",IDC_MASTER_TUNE,"SliderControl",0x4,4,4,17,62
+    CONTROL         "Trans..",IDC_MASTER_TRANSPOSE,"SliderControl",0x4,26,4,
+                    17,62
+    CONTROL         "Bend\nrange",IDC_MASTER_BEND_RANGE,"SliderControl",0x4,
+                    48,4,17,62
+    COMBOBOX        IDC_MASTER_CHAN1_PROGRAM,109,20,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN1_VOLUME,"UpdownControl",0x4,199,20,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN1_VOLUME_TEXT,197,30,16,8
+    CONTROL         "",IDC_MASTER_CHAN1_PAN,"UpdownControl",0x4,215,20,9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN1_PAN_TEXT,213,30,16,8
+    COMBOBOX        IDC_MASTER_CHAN2_PROGRAM,109,38,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN2_VOLUME,"UpdownControl",0x4,199,38,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN2_VOLUME_TEXT,197,48,16,8
+    CONTROL         "",IDC_MASTER_CHAN2_PAN,"UpdownControl",0x4,215,38,9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN2_PAN_TEXT,213,48,16,8
+    COMBOBOX        IDC_MASTER_CHAN3_PROGRAM,109,57,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN3_VOLUME,"UpdownControl",0x4,199,57,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN3_VOLUME_TEXT,197,67,16,8
+    CONTROL         "",IDC_MASTER_CHAN3_PAN,"UpdownControl",0x4,215,57,9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN3_PAN_TEXT,213,67,16,8
+    COMBOBOX        IDC_MASTER_CHAN4_PROGRAM,109,76,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN4_VOLUME,"UpdownControl",0x4,199,76,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN4_VOLUME_TEXT,197,86,16,8
+    CONTROL         "",IDC_MASTER_CHAN4_PAN,"UpdownControl",0x4,215,76,9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN4_PAN_TEXT,213,86,16,8
+    COMBOBOX        IDC_MASTER_CHAN5_PROGRAM,109,94,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN5_VOLUME,"UpdownControl",0x4,199,94,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN5_VOLUME_TEXT,197,104,16,8
+    CONTROL         "",IDC_MASTER_CHAN5_PAN,"UpdownControl",0x4,215,94,9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN5_PAN_TEXT,213,104,16,8
+    COMBOBOX        IDC_MASTER_CHAN6_PROGRAM,109,113,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN6_VOLUME,"UpdownControl",0x4,199,113,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN6_VOLUME_TEXT,197,123,16,8
+    CONTROL         "",IDC_MASTER_CHAN6_PAN,"UpdownControl",0x4,215,113,9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN6_PAN_TEXT,213,123,16,8
+    COMBOBOX        IDC_MASTER_CHAN7_PROGRAM,109,132,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN7_VOLUME,"UpdownControl",0x4,199,132,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN7_VOLUME_TEXT,197,142,16,8
+    CONTROL         "",IDC_MASTER_CHAN7_PAN,"UpdownControl",0x4,215,132,9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN7_PAN_TEXT,213,142,16,8
+    CONTROL         "",IDC_MASTER_CHAN8_VOLUME,"UpdownControl",0x4,199,151,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN8_VOLUME_TEXT,197,161,16,8
+    CONTROL         "",IDC_MASTER_CHAN8_PAN,"UpdownControl",0x4,215,151,9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN8_PAN_TEXT,213,161,16,8
+    COMBOBOX        IDC_MASTER_CHAN8_PROGRAM,109,150,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MASTER_CHAN9_PROGRAM,238,20,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN9_VOLUME,"UpdownControl",0x4,328,20,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN9_VOLUME_TEXT,326,30,16,8
+    CONTROL         "",IDC_MASTER_CHAN9_PAN,"UpdownControl",0x4,344,20,9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN9_PAN_TEXT,342,30,16,8
+    COMBOBOX        IDC_MASTER_CHAN10_PROGRAM,238,38,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN10_VOLUME,"UpdownControl",0x4,328,38,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN10_VOLUME_TEXT,326,48,16,8
+    CONTROL         "",IDC_MASTER_CHAN10_PAN,"UpdownControl",0x4,344,38,9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN10_PAN_TEXT,342,48,16,8
+    COMBOBOX        IDC_MASTER_CHAN11_PROGRAM,238,57,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN11_VOLUME,"UpdownControl",0x4,328,57,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN11_VOLUME_TEXT,326,67,16,8
+    CONTROL         "",IDC_MASTER_CHAN11_PAN,"UpdownControl",0x4,344,57,9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN11_PAN_TEXT,342,67,16,8
+    COMBOBOX        IDC_MASTER_CHAN12_PROGRAM,238,76,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN12_VOLUME,"UpdownControl",0x4,328,76,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN12_VOLUME_TEXT,326,86,16,8
+    CONTROL         "",IDC_MASTER_CHAN12_PAN,"UpdownControl",0x4,344,76,9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN12_PAN_TEXT,342,86,16,8
+    COMBOBOX        IDC_MASTER_CHAN13_PROGRAM,238,94,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN13_VOLUME,"UpdownControl",0x4,328,94,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN13_VOLUME_TEXT,326,104,16,8
+    CONTROL         "",IDC_MASTER_CHAN13_PAN,"UpdownControl",0x4,344,94,9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN13_PAN_TEXT,342,104,16,8
+    COMBOBOX        IDC_MASTER_CHAN14_PROGRAM,238,113,86,136,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN14_VOLUME,"UpdownControl",0x4,328,113,
+                    9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN14_VOLUME_TEXT,326,123,16,8
+    CONTROL         "",IDC_MASTER_CHAN14_PAN,"UpdownControl",0x4,344,113,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN14_PAN_TEXT,342,123,16,8
+    COMBOBOX        IDC_MASTER_CHAN15_PROGRAM,238,132,86,136,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_MASTER_CHAN15_VOLUME,"UpdownControl",0x4,328,132,
+                    9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN15_VOLUME_TEXT,326,142,16,8
+    CONTROL         "",IDC_MASTER_CHAN15_PAN,"UpdownControl",0x4,344,132,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN15_PAN_TEXT,342,142,16,8
+    CONTROL         "",IDC_MASTER_CHAN16_VOLUME,"UpdownControl",0x4,328,151,
+                    9,10
+    LTEXT           "<n>",IDC_MASTER_CHAN16_VOLUME_TEXT,326,161,16,8
+    CONTROL         "",IDC_MASTER_CHAN16_PAN,"UpdownControl",0x4,344,151,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CHAN16_PAN_TEXT,342,161,16,8
+    COMBOBOX        IDC_MASTER_CHAN16_PROGRAM,238,150,86,136,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "1",-1,101,22,6,8
+    LTEXT           "2",-1,101,41,6,8
+    LTEXT           "3",-1,101,60,6,8
+    LTEXT           "4",-1,101,79,6,8
+    LTEXT           "5",-1,101,96,6,8
+    LTEXT           "6",-1,101,115,6,8
+    LTEXT           "7",-1,101,134,6,8
+    LTEXT           "8",-1,101,153,6,8
+    LTEXT           "9",-1,228,22,8,8
+    LTEXT           "10",-1,226,41,8,8
+    LTEXT           "11",-1,226,60,8,8
+    LTEXT           "12",-1,226,79,8,8
+    LTEXT           "13",-1,226,96,8,8
+    LTEXT           "14",-1,226,115,8,8
+    LTEXT           "15",-1,226,134,8,8
+    LTEXT           "16",-1,226,153,8,8
+    GROUPBOX        "Channel settings",-1,98,1,260,171
+    COMBOBOX        IDC_MASTER_VELOCITY_CURVE,4,76,49,54,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Velocity curve",-1,4,67,50,8
+    COMBOBOX        IDC_MASTER_MIDI_MODE,59,76,36,54,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "MIDI mode",-1,59,67,36,8
+    CONTROL         "",IDC_MASTER_MIDI_ID,"UpdownControl",0x4,37,91,9,10
+    LTEXT           "<n>",IDC_MASTER_MIDI_ID_TEXT,51,92,18,8
+    LTEXT           "MIDI ID",-1,4,92,28,8
+    CONTROL         "MIDI mode change",IDC_MASTER_MIDI_MODE_CHANGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,4,101,72,12
+    CONTROL         "",IDC_MASTER_CONTROLLER_A,"UpdownControl",0x4,17,124,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CONTROLLER_A_TEXT,31,125,14,8
+    LTEXT           "A",-1,8,125,8,8
+    CONTROL         "",IDC_MASTER_CONTROLLER_B,"UpdownControl",0x4,17,135,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CONTROLLER_B_TEXT,31,137,14,8
+    CONTROL         "",IDC_MASTER_CONTROLLER_C,"UpdownControl",0x4,17,146,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CONTROLLER_C_TEXT,31,148,14,8
+    CONTROL         "",IDC_MASTER_CONTROLLER_D,"UpdownControl",0x4,17,158,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_CONTROLLER_D_TEXT,31,159,14,8
+    GROUPBOX        "MIDI ctrl.",-1,2,112,44,60
+    LTEXT           "B",-1,8,136,8,8
+    LTEXT           "C",-1,8,147,8,8
+    LTEXT           "D",-1,8,158,8,8
+    CONTROL         "",IDC_MASTER_FOOTSWITCH_1,"UpdownControl",0x4,61,128,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_FOOTSWITCH_1_TEXT,73,129,14,8
+    LTEXT           "1",-1,53,128,8,8
+    CONTROL         "",IDC_MASTER_FOOTSWITCH_2,"UpdownControl",0x4,61,140,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_FOOTSWITCH_2_TEXT,73,141,14,8
+    CONTROL         "",IDC_MASTER_FOOTSWITCH_3,"UpdownControl",0x4,61,153,9,
+                    10
+    LTEXT           "<n>",IDC_MASTER_FOOTSWITCH_3_TEXT,73,154,14,8
+    GROUPBOX        "Footsw.",-1,49,112,40,60
+    LTEXT           "2",-1,53,141,8,8
+    LTEXT           "3",-1,53,154,8,8
+    LTEXT           "Pan",-1,213,9,16,8
+    LTEXT           "Vol.",-1,197,9,16,8
+    LTEXT           "Pan",-1,341,9,16,8
+    LTEXT           "Vol.",-1,325,9,16,8
+END
+
+DLG_USER_TUNING DIALOG DISCARDABLE  155, 148, 195, 174
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU | WS_GROUP
+CAPTION "User tuning"
+CLASS "MorpheusDialog"
+FONT 8, "Morpheus dialog"
+BEGIN
+    CONTROL         "",-1,"Static",SS_BLACKRECT,3,3,132,168
+    LISTBOX         IDC_USER_TUNING_LISTBOX,7,14,124,154,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    LTEXT           "MIDI key",IDC_USER_TUNING_LABEL1,6,4,32,8
+    LTEXT           "Coarse tune",IDC_USER_TUNING_LABEL2,44,4,44,8
+    LTEXT           "Fine tune",IDC_USER_TUNING_LABEL3,90,4,34,8
+    CONTROL         "",-1,"Static",SS_BLACKRECT,138,3,54,90
+    CONTROL         "Coarse\ntune",IDC_USER_TUNING_COARSE,"SliderControl",
+                    0x4,146,16,17,62
+    CONTROL         "Fine\ntune",IDC_USER_TUNING_FINE,"SliderControl",0x4,
+                    168,16,17,62
+    PUSHBUTTON      "&Store",IDC_USER_TUNING_SEND,146,108,36,14
+    PUSHBUTTON      "&Abort",IDC_USER_TUNING_ABORT,146,126,36,14
+END
+
+DLG_PROGRAM_MAP DIALOG DISCARDABLE  156, 130, 198, 171
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU | WS_GROUP
+CAPTION "Program map"
+CLASS "MorpheusDialog"
+FONT 8, "Morpheus dialog"
+BEGIN
+    CONTROL         "",-1,"Static",SS_BLACKRECT,3,4,98,164
+    LTEXT           "Input",IDC_PM_LABEL1,7,7,18,8
+    LTEXT           "Output program",IDC_PM_LABEL2,28,7,64,8
+    LISTBOX         IDC_PM_LIST,6,17,92,148,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    CONTROL         "",-1,"Static",SS_BLACKRECT,104,30,90,28
+    LTEXT           "Output program",-1,107,34,52,8
+    COMBOBOX        IDC_PM_OUTPUT_PROGRAM,106,43,86,136,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",-1,"Static",SS_BLACKRECT,104,4,90,24
+    LTEXT           "Selected\nprogram map",-1,106,7,46,18
+    COMBOBOX        IDC_PM_CURRENT_MAP,164,12,28,46,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Save",IDC_PM_SEND,124,88,46,16
+    PUSHBUTTON      "&Abandon",IDC_PM_ABANDON,124,108,46,16
+END
+
+DLG_PRESET_VOICES DIALOG DISCARDABLE  74, 74, 364, 276
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU | WS_GROUP
+CAPTION "Voices"
+FONT 8, "Morpheus dialog"
+BEGIN
+    GROUPBOX        "Primary",IDC_PRIMARY_GROUPBOX,3,18,359,129
+    COMBOBOX        IDC_INSTR1_INSTRUMENT,7,38,53,116,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_INSTR1_LOW_KEY_EDITBOX,163,35,19,12,ES_READONLY
+    LTEXT           "Instrument",-1,7,28,50,8
+    LTEXT           "Low key",-1,163,25,29,8
+    EDITTEXT        IDC_INSTR1_HIGH_KEY_EDITBOX,163,58,19,12,ES_READONLY
+    LTEXT           "High key",-1,163,48,33,8
+    CONTROL         "",IDC_INSTR1_LOW_KEY_CONTROL,"UpdownControl",0x4,185,37,
+                    9,10
+    CONTROL         "",IDC_INSTR1_HIGH_KEY_CONTROL,"UpdownControl",0x4,184,
+                    59,9,10
+    CONTROL         "Coarse\ntune",IDC_INSTR1_COARSE_TUNE,"SliderControl",
+                    0x4,7,53,17,62
+    CONTROL         "Fine\ntune",IDC_INSTR1_FINE_TUNE,"SliderControl",0x4,24,
+                    53,17,62
+    CONTROL         "Key\ntrans.",IDC_INSTR1_KEY_TRANSPOSE,"SliderControl",
+                    0x4,41,53,17,62
+    CONTROL         "Dbl+\ndetune",IDC_INSTR1_DOUBLE_DETUNE,"SliderControl",
+                    0x4,58,53,17,62
+    CONTROL         "Reverse",IDC_INSTR1_REVERSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,63,27,39,12
+    CONTROL         "Non-trans",IDC_INSTR1_NON_TRANSPOSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,63,39,43,12
+    CONTROL         "Loop enable",IDC_INSTR1_LOOP_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,117,52,12
+    LTEXT           "Loop start high, low",-1,61,119,66,8
+    CONTROL         "Delay",IDC_INSTR1_SOUND_DELAY,"SliderControl",0x4,75,53,
+                    17,62
+    CONTROL         "Start",IDC_INSTR1_SOUND_START,"SliderControl",0x4,92,53,
+                    17,62
+    LTEXT           "Solo mode",-1,163,71,35,8
+    LTEXT           "Solo priority",-1,162,93,40,8
+    CONTROL         "Level",IDC_FILTER1_LEVEL,"SliderControl",0x4,291,82,17,
+                    62
+    COMBOBOX        IDC_FILTER1_TYPE,291,36,53,114,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Filter reverse",IDC_FILTER1_REVERSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,292,68,57,12
+    CONTROL         "Morph",IDC_FILTER1_MORPH,"SliderControl",0x4,308,82,17,
+                    62
+    CONTROL         "Freq\ntrack",IDC_FILTER1_FREQ_TRACK,"SliderControl",0x4,
+                    325,82,17,62
+    CONTROL         "Trans\n2",IDC_FILTER1_TRANS2,"SliderControl",0x4,342,82,
+                    17,62
+    LTEXT           "Filter type",-1,290,26,54,8
+    COMBOBOX        IDC_PORTAMENTO1_SHAPE,111,39,39,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Port. shape",-1,111,29,39,8
+    CONTROL         "Port.\nrate",IDC_PORTAMENTO1_RATE,"SliderControl",0x4,
+                    109,53,17,62
+    CONTROL         "Pan",IDC_PAN1_POSITION,"SliderControl",0x4,126,53,17,62
+    CONTROL         "",IDC_INSTR1_LOOP_START_HIGH,"UpdownControl",0x4,133,
+                    118,9,10
+    CONTROL         "",IDC_INSTR1_LOOP_START_LOW,"UpdownControl",0x4,143,118,
+                    9,10
+    LTEXT           "Loop length high, low",-1,61,132,70,8
+    CONTROL         "",IDC_INSTR1_LOOP_LENGTH_HIGH,"UpdownControl",0x4,133,
+                    132,9,10
+    CONTROL         "",IDC_INSTR1_LOOP_LENGTH_LOW,"UpdownControl",0x4,143,
+                    132,9,10
+    CONTROL         "",IDC_ALT_ENV1_ENVELOPE,"EnvelopeControl",0x4,203,36,85,
+                    44
+    COMBOBOX        IDC_INSTR1_SOLO_MODE_CONTROL,163,80,36,46,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_INSTR1_SOLO_PRIORITY_CONTROL,163,103,36,41,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Attack",IDC_ALT_ENV1_ATTACK,"SliderControl",0x4,203,82,
+                    17,62
+    CONTROL         "Hold",IDC_ALT_ENV1_HOLD,"SliderControl",0x4,220,82,17,
+                    62
+    CONTROL         "Decay",IDC_ALT_ENV1_DECAY,"SliderControl",0x4,237,82,17,
+                    62
+    CONTROL         "Sust.",IDC_ALT_ENV1_SUSTAIN,"SliderControl",0x4,254,82,
+                    17,62
+    CONTROL         "Rel.",IDC_ALT_ENV1_RELEASE,"SliderControl",0x4,271,82,
+                    17,62
+    CONTROL         "Alt. envelope",IDC_ALT_ENV1_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,203,25,57,9
+    GROUPBOX        "Secondary",IDC_SECONDARY_GROUPBOX,3,147,359,128
+    COMBOBOX        IDC_INSTR2_INSTRUMENT,7,168,53,116,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_INSTR2_LOW_KEY_EDITBOX,162,163,19,12,ES_READONLY
+    LTEXT           "Instrument",-1,7,157,50,8
+    LTEXT           "Low key",-1,162,153,29,8
+    EDITTEXT        IDC_INSTR2_HIGH_KEY_EDITBOX,162,186,19,12,ES_READONLY
+    LTEXT           "High key",-1,162,176,33,8
+    CONTROL         "",IDC_INSTR2_LOW_KEY_CONTROL,"UpdownControl",0x4,184,
+                    165,9,10
+    CONTROL         "",IDC_INSTR2_HIGH_KEY_CONTROL,"UpdownControl",0x4,183,
+                    187,9,10
+    CONTROL         "Reverse",IDC_INSTR2_REVERSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,63,156,39,12
+    CONTROL         "Non-trans",IDC_INSTR2_NON_TRANSPOSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,63,168,43,12
+    CONTROL         "Loop enable",IDC_INSTR2_LOOP_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,248,52,10
+    LTEXT           "Solo mode",-1,162,199,35,8
+    LTEXT           "Solo priority",-1,161,221,40,8
+    CONTROL         "Level",IDC_FILTER2_LEVEL,"SliderControl",0x4,291,211,17,
+                    62
+    COMBOBOX        IDC_FILTER2_TYPE,291,165,53,114,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Filter reverse",IDC_FILTER2_REVERSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,292,197,57,12
+    CONTROL         "Morph",IDC_FILTER2_MORPH,"SliderControl",0x4,308,211,17,
+                    62
+    CONTROL         "Freq\ntrack",IDC_FILTER2_FREQ_TRACK,"SliderControl",0x4,
+                    325,211,17,62
+    CONTROL         "Trans\n2",IDC_FILTER2_TRANS2,"SliderControl",0x4,342,
+                    211,17,62
+    LTEXT           "Filter type",-1,290,155,54,8
+    COMBOBOX        IDC_PORTAMENTO2_SHAPE,111,168,39,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Port. shape",-1,111,158,39,8
+    COMBOBOX        IDC_INSTR2_SOLO_MODE_CONTROL,162,208,36,46,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_INSTR2_SOLO_PRIORITY_CONTROL,162,231,36,40,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Alt. envelope",IDC_ALT_ENV2_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,203,154,57,9
+    CONTROL         "Vol",IDC_INSTR1_VOLUME,"SliderControl",0x4,143,53,17,62
+    CONTROL         "",IDC_ALT_ENV2_ENVELOPE,"EnvelopeControl",0x4,203,165,
+                    85,44
+    CONTROL         "Attack",IDC_ALT_ENV2_ATTACK,"SliderControl",0x4,203,211,
+                    17,62
+    CONTROL         "Hold",IDC_ALT_ENV2_HOLD,"SliderControl",0x4,220,211,17,
+                    62
+    CONTROL         "Decay",IDC_ALT_ENV2_DECAY,"SliderControl",0x4,237,211,
+                    17,62
+    CONTROL         "Sust.",IDC_ALT_ENV2_SUSTAIN,"SliderControl",0x4,254,211,
+                    17,62
+    CONTROL         "Rel.",IDC_ALT_ENV2_RELEASE,"SliderControl",0x4,271,211,
+                    17,62
+    CONTROL         "Coarse\ntune",IDC_INSTR2_COARSE_TUNE,"SliderControl",
+                    0x4,7,183,17,62
+    CONTROL         "Fine\ntune",IDC_INSTR2_FINE_TUNE,"SliderControl",0x4,24,
+                    183,17,62
+    CONTROL         "Key\ntrans.",IDC_INSTR2_KEY_TRANSPOSE,"SliderControl",
+                    0x4,41,183,17,62
+    CONTROL         "Dbl+\ndetune",IDC_INSTR2_DOUBLE_DETUNE,"SliderControl",
+                    0x4,58,183,17,62
+    CONTROL         "Delay",IDC_INSTR2_SOUND_DELAY,"SliderControl",0x4,75,
+                    183,17,62
+    CONTROL         "Start",IDC_INSTR2_SOUND_START,"SliderControl",0x4,92,
+                    183,17,62
+    CONTROL         "Port.\nrate",IDC_PORTAMENTO2_RATE,"SliderControl",0x4,
+                    109,183,17,62
+    CONTROL         "Pan",IDC_PAN2_POSITION,"SliderControl",0x4,126,183,17,
+                    62
+    CONTROL         "Vol",IDC_INSTR2_VOLUME,"SliderControl",0x4,143,183,17,
+                    62
+    EDITTEXT        IDC_INSTR1_LOOP_START_HIGH_VALUE,154,117,22,12,ES_RIGHT
+    EDITTEXT        IDC_INSTR1_LOOP_LENGTH_LOW_VALUE,178,131,22,12,ES_RIGHT
+    EDITTEXT        IDC_INSTR1_LOOP_START_LOW_VALUE,178,117,22,12,ES_RIGHT
+    EDITTEXT        IDC_INSTR1_LOOP_LENGTH_HIGH_VALUE,154,131,22,12,ES_RIGHT
+    LTEXT           "Loop start high, low",-1,61,249,66,8
+    CONTROL         "",IDC_INSTR2_LOOP_START_HIGH,"UpdownControl",0x4,133,
+                    248,9,10
+    CONTROL         "",IDC_INSTR2_LOOP_START_LOW,"UpdownControl",0x4,143,248,
+                    9,10
+    LTEXT           "Loop length high, low",-1,61,262,70,8
+    CONTROL         "",IDC_INSTR2_LOOP_LENGTH_HIGH,"UpdownControl",0x4,133,
+                    262,9,10
+    CONTROL         "",IDC_INSTR2_LOOP_LENGTH_LOW,"UpdownControl",0x4,143,
+                    262,9,10
+    EDITTEXT        IDC_INSTR2_LOOP_START_HIGH_VALUE,154,247,22,12,ES_RIGHT
+    EDITTEXT        IDC_INSTR2_LOOP_LENGTH_LOW_VALUE,178,261,22,12,ES_RIGHT
+    EDITTEXT        IDC_INSTR2_LOOP_START_LOW_VALUE,178,247,22,12,ES_RIGHT
+    EDITTEXT        IDC_INSTR2_LOOP_LENGTH_HIGH_VALUE,154,261,22,12,ES_RIGHT
+    CONTROL         "",-1,"Static",SS_WHITEFRAME,0,0,364,17
+    PUSHBUTTON      "&Main",IDC_PRESET_TOOLBAR_MAIN,1,1,50,14
+    PUSHBUTTON      "&Voices",IDC_PRESET_TOOLBAR_VOICES,52,1,50,14
+    PUSHBUTTON      "&LFOs && Auxilary envelope",
+                    IDC_PRESET_TOOLBAR_LFO_AUXENV,104,1,80,14
+    PUSHBUTTON      "&Function generators",IDC_PRESET_TOOLBAR_FG,186,1,60,14
+END
+
+DLG_PRESET_LFO_AUXENV DIALOG DISCARDABLE  133, 114, 212, 197
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU | WS_GROUP
+CAPTION "LFOs and Auxiliary Envelope"
+FONT 8, "Morpheus dialog"
+BEGIN
+    COMBOBOX        IDC_LFO1_SHAPE,7,37,53,62,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Shape",-1,6,28,21,8
+    GROUPBOX        "LFO1",-1,2,19,77,96
+    COMBOBOX        IDC_LFO2_SHAPE,86,37,53,62,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Shape",-1,85,28,21,8
+    GROUPBOX        "LFO2",-1,81,19,77,96
+    CONTROL         "Rate",IDC_LFO1_RATE,"SliderControl",0x4,5,51,17,62
+    CONTROL         "Delay",IDC_LFO1_DELAY,"SliderControl",0x4,23,51,17,62
+    CONTROL         "Var.",IDC_LFO1_VARIATION,"SliderControl",0x4,41,51,17,
+                    62
+    CONTROL         "Amount",IDC_LFO1_AMOUNT,"SliderControl",0x4,59,51,17,62
+    CONTROL         "Rate",IDC_LFO2_RATE,"SliderControl",0x4,84,51,17,62
+    CONTROL         "Delay",IDC_LFO2_DELAY,"SliderControl",0x4,102,51,17,62
+    CONTROL         "Var.",IDC_LFO2_VARIATION,"SliderControl",0x4,120,51,17,
+                    62
+    CONTROL         "Amount",IDC_LFO2_AMOUNT,"SliderControl",0x4,138,51,17,
+                    62
+    CONTROL         "",IDC_AUX_ENV_ENVELOPE,"EnvelopeControl",0x4,138,127,64,
+                    63
+    GROUPBOX        "Auxiliary envelope",IDC_AUX_ENV_GROUPBOX,2,117,203,76
+    CONTROL         "Delay",IDC_AUX_ENV_DELAY,"SliderControl",0x4,25,128,17,
+                    62
+    CONTROL         "Attack",IDC_AUX_ENV_ATTACK,"SliderControl",0x4,47,128,
+                    17,62
+    CONTROL         "Hold",IDC_AUX_ENV_HOLD,"SliderControl",0x4,65,128,17,62
+    CONTROL         "Decay",IDC_AUX_ENV_DECAY,"SliderControl",0x4,83,128,17,
+                    62
+    CONTROL         "Sust.",IDC_AUX_ENV_SUSTAIN,"SliderControl",0x4,101,128,
+                    17,62
+    CONTROL         "Rel.",IDC_AUX_ENV_RELEASE,"SliderControl",0x4,119,128,
+                    17,62
+    CONTROL         "Amount",IDC_AUX_ENV_AMOUNT,"SliderControl",0x4,6,128,17,
+                    62
+    CONTROL         "",-1,"Static",SS_WHITEFRAME,0,0,212,17
+    PUSHBUTTON      "&Main",IDC_PRESET_TOOLBAR_MAIN,1,1,28,14
+    PUSHBUTTON      "&Voices",IDC_PRESET_TOOLBAR_VOICES,31,1,35,14
+    PUSHBUTTON      "&LFOs && Auxilary envelope",
+                    IDC_PRESET_TOOLBAR_LFO_AUXENV,68,1,80,14
+    PUSHBUTTON      "&Function generators",IDC_PRESET_TOOLBAR_FG,150,1,60,14
+END
+
+DLG_PRESET_FG DIALOG DISCARDABLE  70, 75, 265, 215
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU | WS_GROUP
+CAPTION "Function generators"
+FONT 8, "Morpheus dialog"
+BEGIN
+    LISTBOX         IDC_FG1_LISTBOX,33,45,222,67,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    GROUPBOX        "Function generator 1",IDC_FG1_GROUPBOX,3,17,260,99
+    LISTBOX         IDC_FG2_LISTBOX,33,142,223,67,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    GROUPBOX        "Function generator 2",IDC_FG2_GROUPBOX,3,117,260,97
+    LTEXT           "Level",IDC_FG1_LB_LABEL2,53,34,19,8
+    LTEXT           "Time",IDC_FG1_LB_LABEL3,79,34,16,8
+    LTEXT           "Shape",IDC_FG1_LB_LABEL4,103,34,21,8
+    LTEXT           "Cond.jump",IDC_FG1_LB_LABEL5,135,34,34,8
+    LTEXT           "Val.",IDC_FG1_LB_LABEL6,180,34,15,8
+    LTEXT           "->seg",IDC_FG1_LB_LABEL7,219,34,21,8
+    LTEXT           "Level",IDC_FG2_LB_LABEL2,53,132,19,8
+    LTEXT           "Time",IDC_FG2_LB_LABEL3,78,132,16,8
+    LTEXT           "Shape",IDC_FG2_LB_LABEL4,102,132,21,8
+    LTEXT           "Cond.jump",IDC_FG2_LB_LABEL5,134,132,34,8
+    LTEXT           "Val.",IDC_FG2_LB_LABEL6,179,132,15,8
+    LTEXT           "->seg",IDC_FG2_LB_LABEL7,218,132,22,8
+    CONTROL         "Amount",IDC_FG1_AMOUNT,"SliderControl",0x4,7,47,20,62
+    CONTROL         "Amount",IDC_FG2_AMOUNT,"SliderControl",0x4,7,145,20,62
+    LTEXT           "Seg.",IDC_FG1_LB_LABEL1,32,34,15,8
+    LTEXT           "Seg.",IDC_FG2_LB_LABEL1,33,132,15,8
+    CONTROL         "",-1,"Static",SS_WHITEFRAME,0,0,265,17
+    PUSHBUTTON      "&Main",IDC_PRESET_TOOLBAR_MAIN,1,1,50,14
+    PUSHBUTTON      "&Voices",IDC_PRESET_TOOLBAR_VOICES,52,1,45,14
+    PUSHBUTTON      "&LFOs && Auxilary envelope",
+                    IDC_PRESET_TOOLBAR_LFO_AUXENV,98,1,84,14
+    PUSHBUTTON      "&Function generators",IDC_PRESET_TOOLBAR_FG,184,1,67,14
+END
+
+DLG_PRESET_MAIN DIALOG DISCARDABLE  11, 43, 334, 240
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU | WS_GROUP
+CAPTION "Main"
+FONT 8, "Morpheus dialog"
+BEGIN
+    COMBOBOX        IDC_MISC_MIX_SELECT,34,43,42,48,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Mix bus",-1,3,45,25,8
+    EDITTEXT        IDC_MISC_PRESET_NAME,25,23,51,12,ES_AUTOHSCROLL
+    LTEXT           "Name",-1,3,25,20,8
+    EDITTEXT        IDC_KBD_LOW_KEY_EDITBOX,8,117,19,12,ES_READONLY
+    LTEXT           "Low key",-1,8,107,29,8
+    EDITTEXT        IDC_KBD_HIGH_KEY_EDITBOX,42,117,19,12,ES_READONLY
+    LTEXT           "High key",-1,42,107,33,8
+    CONTROL         "",IDC_KBD_LOW_KEY,"UpdownControl",0x4,29,119,9,10
+    CONTROL         "",IDC_KBD_HIGH_KEY,"UpdownControl",0x4,63,118,9,10
+    EDITTEXT        IDC_KBD_CENTRE_EDITBOX,77,117,19,12,ES_READONLY
+    LTEXT           "Centre",-1,77,108,33,8
+    CONTROL         "",IDC_KBD_CENTRE,"UpdownControl",0x4,98,118,9,10
+    GROUPBOX        "Keyboard",-1,4,96,327,38
+    COMBOBOX        IDC_MISC_FOOTSWITCH1_CONTROL,259,30,58,46,
+                    CBS_DROPDOWNLIST | CBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "1",-1,252,32,6,8
+    COMBOBOX        IDC_MISC_FOOTSWITCH2_CONTROL,259,46,58,46,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MISC_FOOTSWITCH3_CONTROL,259,62,58,46,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "MIDI controllers",-1,169,19,77,78
+    GROUPBOX        "Footswitches",-1,249,19,72,61
+    LTEXT           "2",-1,252,48,6,8
+    LTEXT           "3",-1,252,63,6,8
+    EDITTEXT        IDC_XFADE_SWITCH_POINT_EDITBOX,83,60,32,12,ES_READONLY
+    LTEXT           "Switch point",-1,83,51,42,8
+    CONTROL         "",IDC_XFADE_SWITCH_POINT_CONTROL,"UpdownControl",0x4,
+                    118,62,9,10
+    COMBOBOX        IDC_XFADE_MODE,83,38,41,37,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Mode",-1,84,29,25,8
+    COMBOBOX        IDC_XFADE_DIRECTION,83,82,41,33,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Direction",-1,83,73,35,8
+    GROUPBOX        "Cross-fade",-1,79,19,87,78
+    CONTROL         "A amt.",IDC_MISC_MIDI_A_AMOUNT,"SliderControl",0x4,172,
+                    31,17,62
+    CONTROL         "B amt.",IDC_MISC_MIDI_B_AMOUNT,"SliderControl",0x4,190,
+                    31,17,62
+    CONTROL         "C amt.",IDC_MISC_MIDI_C_AMOUNT,"SliderControl",0x4,208,
+                    31,17,62
+    CONTROL         "D amt.",IDC_MISC_MIDI_D_AMOUNT,"SliderControl",0x4,226,
+                    31,17,62
+    CONTROL         "Bal.",IDC_XFADE_BALANCE,"SliderControl",0x4,128,31,17,
+                    62
+    CONTROL         "Amount",IDC_XFADE_AMOUNT,"SliderControl",0x4,146,31,17,
+                    62
+    COMBOBOX        IDC_KBD_VELOCITY_CURVE,110,117,35,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Vel. curve",-1,110,108,34,8
+    COMBOBOX        IDC_KBD_TUNING,147,117,41,44,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Tuning",-1,146,108,28,8
+    EDITTEXT        IDC_KBD_BEND_RANGE_VALUE,190,118,26,12,ES_READONLY
+    CONTROL         "",IDC_KBD_BEND_RANGE,"UpdownControl",0x4,218,119,9,10
+    EDITTEXT        IDC_KBD_PRESSURE_AMOUNT_VALUE,230,117,19,12,ES_READONLY
+    CONTROL         "",IDC_KBD_PRESSURE_AMOUNT,"UpdownControl",0x4,254,118,9,
+                    10
+    LTEXT           "Pressure amt.",-1,228,108,45,8
+    LTEXT           "Bend range",-1,187,108,41,8
+    COMBOBOX        IDC_PORTAMENTO_MODE,274,117,51,52,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Portamento mode",-1,273,108,57,8
+    CONTROL         "",-1,"Static",SS_WHITEFRAME,0,0,334,17
+    PUSHBUTTON      "&Main",IDC_PRESET_TOOLBAR_MAIN,1,1,50,14
+    PUSHBUTTON      "&Voices",IDC_PRESET_TOOLBAR_VOICES,52,1,50,14
+    PUSHBUTTON      "&LFOs && Auxilary envelope",
+                    IDC_PRESET_TOOLBAR_LFO_AUXENV,104,1,80,14
+    PUSHBUTTON      "&Function generators",IDC_PRESET_TOOLBAR_FG,186,1,60,14
+    LISTBOX         IDC_MISC_NOTE_ON_PATCH_LISTBOX,9,154,153,80,
+                    LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    LTEXT           "Source",IDC_MISC_NOTE_ON_LB_LABEL1,10,144,25,8
+    LTEXT           "Destination",IDC_MISC_NOTE_ON_LB_LABEL2,59,144,38,8
+    LTEXT           "Level",IDC_MISC_NOTE_ON_LB_LABEL3,123,144,25,8
+    GROUPBOX        "Note-on routings",IDC_NOTE_ON_MODS_GROUPBOX,4,136,163,
+                    102
+    LISTBOX         IDC_MISC_REAL_TIME_PATCH_LISTBOX,175,154,153,80,
+                    LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    LTEXT           "Source",IDC_MISC_REAL_TIME_LB_LABEL1,175,144,25,8
+    LTEXT           "Destination",IDC_MISC_REAL_TIME_LB_LABEL2,224,144,38,8
+    LTEXT           "Level",IDC_MISC_REAL_TIME_LB_LABEL3,288,144,25,8
+    GROUPBOX        "Real-time routings",IDC_REAL_TIME_MODS_GROUPBOX,169,136,
+                    163,102
+END
+
+DLG_BETA_ABOUT DIALOG DISCARDABLE  155, 129, 224, 157
+STYLE WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 8, "Morpheus dialog"
+BEGIN
+    CONTROL         "",-1,"Static",SS_WHITEFRAME,0,0,224,157
+    LTEXT           "Morpheus / UltraProteus editor for Windows",
+                    IDC_ABOUT_NAME,82,9,134,33
+    DEFPUSHBUTTON   "&OK",IDOK,94,137,35,14
+    LTEXT           "Copyright © 1994, PJA White",-1,82,51,102,9
+    LTEXT           "",IDC_ABOUT_EDITOR_VERSION,82,43,102,8
+    LTEXT           "Compuserve: 100027,164\nInternet: 100027.164@COMPUSERVE.COM",
+                    -1,82,61,138,25
+    LTEXT           "",IDC_ABOUT_EXTRA1,7,92,212,38
+    CONTROL         "BMP_EMU_LOGO",-1,"StaticBitmap",0x0,6,8,68,73
+    CONTROL         "",-1,"Static",SS_BLACKRECT,92,135,40,19
+    CONTROL         "",-1,"Static",SS_BLACKRECT,5,7,71,76
+END
+
+DLG_PRESET_MACRO DIALOG DISCARDABLE  170, 122, 70, 140
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Preset block"
+FONT 8, "Morpheus dialog"
+BEGIN
+    LISTBOX         IDC_MACRO_NAME_LISTBOX,2,3,65,72,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    PUSHBUTTON      "&Load",IDC_MACRO_LOAD,2,78,24,12
+    PUSHBUTTON      "&Save",IDC_MACRO_SAVE,2,91,24,12
+    PUSHBUTTON      "&Cancel",IDCANCEL,2,127,24,12
+    EDITTEXT        IDC_MACRO_NAME,3,113,63,12,ES_AUTOHSCROLL
+    LTEXT           "Save name",-1,2,104,37,8
+END
+
+DLG_DIRECTORY_FILEOPEN DIALOG DISCARDABLE  125, 117, 134, 203
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Select storage directory"
+FONT 8, "Morpheus dialog"
+BEGIN
+    CONTROL         "",-1,"Static",SS_BLACKRECT,2,2,128,136
+    LTEXT           " Current &directory",-1,5,6,122,9
+    LTEXT           "",stc1,5,18,122,9,SS_NOPREFIX | NOT WS_GROUP
+    LISTBOX         lst2,5,30,122,104,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",-1,"Static",SS_BLACKRECT,3,141,126,40
+    LTEXT           " Dri&ves",stc4,6,145,116,9
+    COMBOBOX        cmb2,5,157,122,62,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_NOINTEGRALHEIGHT | WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "File &Name:",stc3,142,1,76,9
+    EDITTEXT        edt1,142,11,90,12,ES_AUTOHSCROLL | ES_OEMCONVERT
+    LISTBOX         lst1,142,27,90,68,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "List Files of &Type:",stc2,142,99,90,9
+    COMBOBOX        cmb1,142,109,90,36,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Read Only",chx1,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,142,133,50,12
+    DEFPUSHBUTTON   "&Help",pshHelp,196,134,36,15
+    PUSHBUTTON      "&OK",IDOK,13,185,32,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,49,185,32,14
+    PUSHBUTTON      "&Network",psh14,85,185,32,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+MENU_MAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "&Load"
+        BEGIN
+            MENUITEM "&All sounds",                 IDM_FILE_LOAD_ALL_SOUNDS
+            MENUITEM "Single &preset",              IDM_FILE_LOAD_CURRENT_PRESET
+
+            MENUITEM "Single &hyperpreset",         IDM_FILE_LOAD_CURRENT_HYPERPRESET
+
+            MENUITEM "Single &midimap",             IDM_FILE_LOAD_CURRENT_MIDIMAP
+
+            MENUITEM "&User tuning",                IDM_FILE_LOAD_TUNING_TABLE
+
+            MENUITEM "P&rogram map",                IDM_FILE_LOAD_PROGRAM_MAP
+
+        END
+        POPUP "&Save"
+        BEGIN
+            MENUITEM "&All sounds",                 IDM_FILE_SAVE_ALL_SOUNDS
+            MENUITEM "Single &preset",              IDM_FILE_SAVE_CURRENT_PRESET
+
+            MENUITEM "Single &hyperpreset",         IDM_FILE_SAVE_CURRENT_HYPERPRESET
+
+            MENUITEM "Single &midimap",             IDM_FILE_SAVE_CURRENT_MIDIMAP
+
+            MENUITEM "&User tuning",                IDM_FILE_SAVE_TUNING_TABLE
+
+            MENUITEM "P&rogram map",                IDM_FILE_SAVE_PROGRAM_MAP
+
+        END
+        POPUP "&Export MIDI file"
+        BEGIN
+            MENUITEM "Single &preset",              IDM_FILE_EXPORT_CURRENT_PRESET
+
+            MENUITEM "Single &hyperpreset",         IDM_FILE_EXPORT_CURRENT_HYPERPRESET
+
+        END
+        MENUITEM "E&xit",                       IDM_FILE_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Preferences",                IDM_OPTIONS_MIDI
+        MENUITEM "&Single preset window",       IDM_OPTIONS_BIG_PRESET_DIALOG
+
+        MENUITEM SEPARATOR
+        MENUITEM "&Connect to synthesizer",     IDM_OPTIONS_CONNECT_TO_MORPHEUS
+
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Presets",                    IDM_EDIT_PRESETS
+        MENUITEM "&Hyperpresets",               IDM_EDIT_HYPERPRESETS
+        MENUITEM "&Midimaps",                   IDM_EDIT_MIDIMAPS
+        MENUITEM "&User tuning",                IDM_EDIT_USER_TUNING
+        MENUITEM "&Program maps",               IDM_EDIT_PROGRAM_MAPS
+        MENUITEM "M&aster settings",            IDM_EDIT_MASTER_SETTINGS
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    IDM_WINDOW_CASCADE
+        MENUITEM "&Arrange icons",              IDM_WINDOW_ARRANGE_ICONS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      IDM_HELP_ABOUT
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""dlgs.h""\r\n"
+    "#include ""ver.h""\r\n"
+    "#include ""version.h""\r\n"
+    "#include ""aucntrl.h""\r\n"
+    "#include ""morpheus.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    "DLG_FG_EDIT", DIALOG
+    BEGIN
+        RIGHTMARGIN, 225
+    END
+
+    "DLG_ZONE", DIALOG
+    BEGIN
+        RIGHTMARGIN, 275
+    END
+
+    "DLG_PATCH_SLIDER", DIALOG
+    BEGIN
+        RIGHTMARGIN, 17
+        BOTTOMMARGIN, 87
+    END
+
+    "DLG_PRESET_FG", DIALOG
+    BEGIN
+        RIGHTMARGIN, 255
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_GLOBAL              "Global"
+    IDS_ATOZ                "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    IDS_ERROR_TITLE         "Error"
+    IDS_QUESTION_TITLE      "Question"
+    IDS_WARNING_TITLE       "Warning"
+    IDS_OUT_OF_MEMORY       "Out of memory"
+    IDS_CDERR_FINDRESFAILURE 
+                            "The common dialog box procedure failed to find a specified resource"
+    IDS_CDERR_INITIALIZATION 
+                            "The common dialog box procedure failed during initialization."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CDERR_LOADRESFAILURE 
+                            "The common dialog box procedure failed to load a specified resource."
+    IDS_CDERR_LOCKRESFAILURE 
+                            "The common dialog box procedure failed to lock a specified resource."
+    IDS_CDERR_LOADSTRFAILURE 
+                            "The common dialog box procedure failed to load a specified string."
+    IDS_CDERR_MEMALLOCFAILURE 
+                            "The common dialog box procedure was unable to allocate memory for internal structures."
+    IDS_CDERR_MEMLOCKFAILURE 
+                            "The common dialog box procedure was unable to lock the memory associated with a handle."
+    IDS_CDERR_NOHINSTANCE   "The ENABLETEMPLATE flag was set in the Flags member of a structure for the corresponding common dialog box but that the application failed to provide a corresponding instance handle."
+    IDS_CDERR_NOHOOK        "The ENABLEHOOK flag was set in the Flags member of a structure for the corresponding common dialog box but that the application failed to provide a pointer to a corresponding hook function."
+    IDS_CDERR_NOTEMPLATE    "The ENABLETEMPLATE flag was set in the Flags member of a structure for the corresponding common dialog box but that the application failed to provide a corresponding template."
+    IDS_CDERR_REGISTERMSGFAIL 
+                            "The RegisterWindowMessage function returned an error value when it was called by the common dialog box procedure."
+    IDS_CDERR_STRUCTSIZE    "Specifies as invalid the lStructSize member of a structure for the corresponding common dialog box."
+    IDS_CFERR_NOFONTS       "Specifies that no fonts exist."
+    IDS_CFERR_MAXLESSTHANMIN 
+                            "The size specified in the nSizeMax member of the CHOOSEFONT structure is less than the size specified in the nSizeMin member."
+    IDS_FNERR_BUFFERTOOSMALL 
+                            "The buffer for a filename is too small. (This buffer is pointed to by the lpstrFile member of the structure for a common dialog box.)"
+    IDS_FNERR_INVALIDFILENAME "Specifies that a filename is invalid."
+    IDS_FNERR_SUBCLASSFAILURE 
+                            "An attempt to subclass a list box failed due to insufficient memory."
+    IDS_FRERR_BUFFERLENGTHZERO 
+                            "A member in a structure for the corresponding common dialog box points to an invalid buffer."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PDERR_CREATEICFAILURE 
+                            "The PrintDlg function failed when it attempted to create an information context."
+    IDS_PDERR_DEFAULTDIFFERENT 
+                            "An application has called PrintDlg() with the DN_DEFAULTPRN flag set in the wDefault member of the DEVNAMES structure, but the printer described by the other structure members does not match the default printer"
+    IDS_PDERR_DNDMMISMATCH  "The data in the DEVMODE and DEVNAMES structures describes two different printers."
+    IDS_PDERR_GETDEVMODEFAIL 
+                            "The printer driver failed to initialize a DEVMODE structure. (This error value applies only to printer drivers written for Windows versions 3.0 and later.)"
+    IDS_PDERR_INITFAILURE   "The PrintDlg function failed during initialization."
+    IDS_PDERR_LOADDRVFAILURE 
+                            "The PrintDlg function failed to load the device driver for the specified printer."
+    IDS_PDERR_NODEFAULTPRN  "A default printer does not exist."
+    IDS_PDERR_NODEVICES     "No printer drivers were found."
+    IDS_PDERR_PARSEFAILURE  "The PrintDlg function failed to parse the strings in the [devices] section of the WIN.INI file."
+    IDS_PDERR_PRINTERNOTFOUND 
+                            "The [devices] section of the WIN.INI file did not contain an entry for the requested printer."
+    IDS_PDERR_RETDEFFAILURE "The PD_RETURNDEFAULT flag was set in the Flags member of the PRINTDLG structure but that either the hDevMode or hDevNames member was nonzero."
+    IDS_PDERR_SETUPFAILURE  "The PrintDlg function failed to load the required resources."
+    IDS_CDERR_UNKNOWN       "Unknown COMMDLG error"
+    IDS_CDERR_TITLE         "COMMDLG error"
+    IDS_ERROR_FILE_OPEN     "Error opening file"
+    IDS_ERROR_FILE_READ     "Error reading file"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_WRONG_FILE_TYPE "Incorrect file type"
+    IDS_ERROR_CORRUPT_FILE  "Corrupt file"
+    IDS_NOT_CONNECTED_NO_HP "Not connected to synth and hyperpreset is not loaded"
+    IDS_SAVE_HP_FILEBOX_TITLE "Save single hyperpreset"
+    IDS_SAVE_HP_FILEBOX_MASK "Hyperpreset"
+    IDS_SAVE_HP_ERROR_FETCHING "Error fetching hyperpreset from synth"
+    IDS_SAVE_HP_ERROR_DISK  "Error saving hyperpreset to disk"
+    IDS_LOAD_HP_ARE_YOU_SURE 
+                            "Are you sure ?\nIf you answer YES, you will overwrite the selected hyperpreset in the synth"
+    IDS_LOAD_HP_FILEBOX_TITLE "Load single hyperpreset"
+    IDS_LOAD_HP_FILEBOX_MASK "Hyperpreset"
+    IDS_LOAD_HP_ERROR       "Error loading hyperpreset from disk"
+    IDS_NOT_CONNECTED_NO_MM "Not connected to synth and midimap is not loaded"
+    IDS_SAVE_MM_FILEBOX_TITLE "Save single midimap"
+    IDS_SAVE_MM_FILEBOX_MASK "Midimap"
+    IDS_SAVE_MM_ERROR_FETCHING "Error fetching midimap from synth"
+    IDS_SAVE_MM_ERROR_DISK  "Error saving midimap to disk"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOAD_MM_ARE_YOU_SURE 
+                            "Are you sure ?\nIf you answer YES, you will overwrite the selected midimap in the synth"
+    IDS_LOAD_MM_FILEBOX_TITLE "Load single midimap"
+    IDS_LOAD_MM_FILEBOX_MASK "Midimap"
+    IDS_LOAD_MM_ERROR       "Error loading midimap from disk"
+    IDS_NOT_CONNECTED_NO_PM "Not connected to synth and program map is not loaded"
+    IDS_SAVE_PM_FILEBOX_TITLE "Save current program map"
+    IDS_SAVE_PM_FILEBOX_MASK "Program map"
+    IDS_SAVE_PM_ERROR_FETCHING "Error fetching program map from synth"
+    IDS_SAVE_PM_ERROR_DISK  "Error saving program map to disk"
+    IDS_LOAD_PM_ARE_YOU_SURE 
+                            "Are you sure ?\nIf you answer YES, you will overwrite the selected program map in the synth"
+    IDS_LOAD_PM_FILEBOX_TITLE "Load single program map"
+    IDS_LOAD_PM_FILEBOX_MASK "Program map"
+    IDS_LOAD_PM_ERROR       "Error loading program map from disk"
+    IDS_NOT_CONNECTED_NO_PR "Not connected to synth and preset is not loaded"
+    IDS_SAVE_PR_FILEBOX_TITLE "Save single preset"
+    IDS_SAVE_PR_FILEBOX_MASK "Preset"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SAVE_PR_ERROR_FETCHING "Error fetching preset from synth"
+    IDS_SAVE_PR_ERROR_DISK  "Error saving preset to disk"
+    IDS_LOAD_PR_ARE_YOU_SURE 
+                            "Are you sure ?\nIf you answer YES, you will overwrite the selected preset in the synth"
+    IDS_LOAD_PR_FILEBOX_TITLE "Load single preset"
+    IDS_LOAD_PR_FILEBOX_MASK "Preset"
+    IDS_LOAD_PR_ERROR       "Error loading preset from disk"
+    IDS_SAVE_ALL_PRS_NOT_LOADED "Presets are not loaded"
+    IDS_SAVE_ALL_NOT_CON_PRS 
+                            "Not connected to synth and at least one preset is not loaded"
+    IDS_SAVE_ALL_HPS_NOT_LOADED "Hyperpresets are not loaded"
+    IDS_SAVE_ALL_NOT_CON_HPS 
+                            "Not connected to synth and at least one hyperpreset is not loaded"
+    IDS_SAVE_ALL_MMS_NOT_LOADED "Midimaps are not loaded"
+    IDS_SAVE_ALL_NOT_CON_MMS 
+                            "Not connected to synth and at least one midimap is not loaded"
+    IDS_SAVE_ALL_FILEBOX_TITLE "Save all sounds"
+    IDS_SAVE_ALL_FILEBOX_MASK "All sounds"
+    IDS_SAVE_ALL_ABORTED    "User aborted save.\nFile deleted."
+    IDS_LOAD_ALL_NO_CONFIG  "Synth configuration must be loaded before loading sounds."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOAD_ALL_ARE_YOU_SURE 
+                            "Are you sure ?\nIf you answer YES, you will overwrite all the sounds in the synth"
+    IDS_LOAD_ALL_FILEBOX_TITLE "Load all sounds"
+    IDS_LOAD_ALL_FILEBOX_MASK "All sounds"
+    IDS_LOAD_ALL_TOO_MANY_PRS 
+                            "There are more presets in the input file than the synth configuration data indicates. Click on OK to load the file, but only load the first presets."
+    IDS_LOAD_ALL_TOO_FEW_PRS 
+                            "There are fewer presets in the input file than the synth configuration data indicates. Sorry, but there is no use me loading it."
+    IDS_LOAD_ALL_TOO_MANY_HPS 
+                            "There are more hyperpresets in the input file than the synth configuration data indicates. Click on OK to load the file, but only load the first hyperpresets."
+    IDS_LOAD_ALL_TOO_FEW_HPS 
+                            "There are fewer hyperpresets in the input file than the synth configuration data indicates. Sorry, but there is no use me loading it."
+    IDS_LOAD_ALL_TOO_MANY_MMS 
+                            "There are more midimaps in the input file than the synth configuration data indicates. Click on OK to load the file, but only load the first midimaps."
+    IDS_LOAD_ALL_TOO_FEW_MMS 
+                            "There are fewer midimaps in the input file than the synth configuration data indicates. Sorry, but there is no use me loading it."
+    IDS_NOT_CONNECTED_NO_UT "Not connected to synth and tuning table is not loaded"
+    IDS_SAVE_UT_FILEBOX_TITLE "Save user tuning table"
+    IDS_SAVE_UT_FILEBOX_MASK "Tuning table"
+    IDS_SAVE_UT_ERROR_FETCHING "Error fetching tuning table from synth"
+    IDS_SAVE_UT_ERROR_DISK  "Error saving tuning table to disk"
+    IDS_LOAD_UT_ARE_YOU_SURE 
+                            "Are you sure ?\nIf you answer YES, you will overwrite the user tuning table in the synth"
+    IDS_LOAD_UT_FILEBOX_TITLE "Load user tuning table"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOAD_UT_FILEBOX_MASK "Tuning table "
+    IDS_LOAD_UT_ERROR       "Error loading tuning table from disk"
+    IDS_EDIT_WINDOW_TITLE_MASK "Edit : %s"
+    IDS_NO_PRESET_NAME      "(None)"
+    IDS_FREE_RUN_FG_STEP_TITLE "Free-running function generator step %u"
+    IDS_HPS_LIST_WINDOW_TITLE "Hyperpresets list"
+    IDS_ERROR_CREATING_HPS_LIST "Error creating hyperpresets list window"
+    IDS_MODIFIED_HP_NOT_SAVED 
+                            "You have modified the current hyperpreset but have not yet saved it. Do you want to save it ?"
+    IDS_ERROR_SENDING_HP    "Error sending hyperpreset"
+    IDS_ERROR_OPENING_MIDI_DEVS "Error opening MIDI devices"
+    IDS_ERROR_REG_CLASSES   "Error registering window classes"
+    IDS_MAIN_WINDOW_TITLE   "Morpheus / UltraProteus editor"
+    IDS_ERROR_CREATING_MAIN_WND "Error creating main window"
+    IDS_MIDI_STATUS_IDLE    "Idle"
+    IDS_ERROR_READING_MIDI_DATA "Error reading MIDI data"
+    IDS_ERROR_STORING_INTERNALS "Error storing internals file"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_CREATING_PS_WNDS "Error creating preset window"
+    IDS_ERROR_CREATING_HPS_WNDS "Error creating hyperpreset windows"
+    IDS_ERROR_CREATING_MMS_WNDS "Error creating midimap windows"
+    IDS_VERSION_MASK        "Version %d.%03d %s"
+    IDS_YES_STRING          "Yes"
+    IDS_NO_STRING           "No"
+    IDS_CONNECT_QUERY       "Are you sure you want to connect to the Morpheus / UltraProteus ?\nIf you haven't got a synth connected, or it isn't switched on, select NO"
+    IDS_CONNECT_OVERWRITE_QUERY 
+                            "There are already sounds loaded in the editor. If you connect to the synth, these will be overwritten with the sounds currently in the synth. Do you want to continue ?"
+    IDS_ERROR_READING_NAMELISTS "Error reading name lists from synth"
+    IDS_MIDI_STATUS_MASK    "Midi status: %s"
+    IDS_COMDLG_RET_MASK     "COMMDLG error message return : 0x%04lX (%lu)"
+    IDS_MSTR_NOT_CONNECTED  "Master settings are only editable once you have connected to the synth"
+    IDS_MSTR_ERROR_READING  "Error reading master settings from synth"
+    IDS_MSTR_ERROR_CREATING_WND "Error creating master settings window"
+    IDS_MIDI_ERR_BAD_DEVICE_ID "Bad device ID"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MIDI_ERR_ALREADY_USED "Already allocated"
+    IDS_MIDI_ERR_OUT_OF_MEMORY "Out of memory"
+    IDS_MIDI_ERR_NO_MIDI_MAP "No MIDI map"
+    IDS_MIDI_ERR_NO_DEV_PORT "No MIDI map device port"
+    IDS_MIDI_ERR_UNKNOWN_MASK "Unknown MIDI/MMSYSTEM error %u"
+    IDS_MIDI_ERR_MBOX_TITLE "MIDI/MMSYSTEM error"
+    IDS_SAVE_MIDI_PR_NOT_CON "Not connected to synth and preset is not loaded"
+    IDS_SAVE_MIDI_PR_FBOX_TITLE "Export single preset as MIDI file"
+    IDS_SAVE_MIDI_PR_FBOX_MASK "MIDI file"
+    IDS_SAVE_MIDI_PR_FILE_MASK "Preset #%d: %s"
+    IDS_SAVE_MIDI_HP_NOT_CON 
+                            "Not connected to synth and hyperpreset is not loaded"
+    IDS_SAVE_MIDI_HP_FBOX_TITLE "Export single hyperpreset as MIDI file"
+    IDS_SAVE_MIDI_HP_FBOX_MASK "MIDI file"
+    IDS_SAVE_MIDI_HP_FILE_MASK "Hyperpreset #%d: %s"
+    IDS_MM_CREATING_WINDOW  "Error creating current midimap window"
+    IDS_MM_EDIT_CHANNEL_TITLE "Midimap for channel %u"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MM_LIST_CREATING_WINDOW "Error creating midimap list window"
+    IDS_MM_LIST_WINDOW_TITLE "List of midimaps"
+    IDS_MODIFIED_MM_NOT_SAVED 
+                            "You have modified the current midimap but have not yet saved it. Do you want to save it ?"
+    IDS_MM_ERROR_SENDING    "Error sending midimap"
+    IDS_MIDIRX_READING_CONFIG "Reading configuration data"
+    IDS_MIDIRX_READING_VERSION "Reading version data"
+    IDS_MIDIRX_READING_PRESET "Reading preset %u"
+    IDS_MIDIRX_CHECKSUM_ERROR "Invalid checksum"
+    IDS_MIDIRX_READING_HP   "Reading hyperpreset %u"
+    IDS_MIDIRX_READING_MM   "Reading midimap %u"
+    IDS_MIDIRX_READING_INSLIST "Reading instrument list"
+    IDS_MIDIRX_READING_FILTLIST "Reading filter list"
+    IDS_MIDIRX_READING_EFFLIST "Reading effects list"
+    IDS_MIDIRX_READING_PRLIST "Reading presets list"
+    IDS_MIDIRX_READING_HPLIST "Reading hyperpresets list"
+    IDS_MIDIRX_READING_MMLIST "Reading midimaps list"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MIDIRX_READING_UT   "Reading tuning table"
+    IDS_MIDIRX_READING_PM   "Reading program map %d"
+    IDS_MIDIRX_READING_MASTER "Reading master settings"
+    IDS_NO_DATA_CARD        "No card"
+    IDS_MIDITX_SENDING_PR   "Sending preset %u"
+    IDS_MIDITX_SENDING_HP   "Sending hyperpreset %u"
+    IDS_MIDITX_SENDING_MM   "Sending midimap %u"
+    IDS_MIDITX_SENDING_UT   "Sending tuning table"
+    IDS_MIDITX_SENDING_PM   "Sending program map %d"
+    IDS_UT_WINDOW_TITLE     "User tuning table"
+    IDS_UT_ERR_CREATING_WINDOW "Error creating tuning window"
+    IDS_UT_ERR_SENDING      "Error sending tuning table"
+    IDS_NO_PATCH_WINDOW_TITLE "Note-on patches"
+    IDS_NO_PATCH_ERR_CREAT_WND "Error creating note-on patchbay window"
+    IDS_RT_PATCH_WINDOW_TITLE "Real-time patches"
+    IDS_RT_PATCH_ERR_CREAT_WND "Error creating real-time patchbay window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_KBD_WINDOW_TITLE    "Test keyboard"
+    IDS_KBD_ERR_CREAT_WND   "Error creating test keyboard window"
+    IDS_VELOCITY_SHORTHAND  "Vel."
+    IDS_PR_WINDOW_TITLE     "Current preset"
+    IDS_PR_ERR_CREAT_WND    "Error creating current preset window"
+    IDS_PR_NO_PATCH_WND_TITLE "Note-on patch %u"
+    IDS_PR_RT_PATCH_WND_TITLE "Real-time patch %u"
+    IDS_PR_FG_STEP_WND_TITLE "Function generator %u step %u"
+    IDS_MACRO_ERR_OPEN      "Error opening preset macro file"
+    IDS_MACRO_ERR_READ      "Error reading from preset macro file"
+    IDS_MACRO_ERR_WRONG_TYPE "Invalid preset macro file type"
+    IDS_MACRO_ERR_WRONG_VERSION "Invalid preset macro file version"
+    IDS_MACRO_OVERWRITE_Q   "Preset macro file already exists.\nDo you want to overwrite it ?"
+    IDS_MACRO_ERR_CREATING  "Error creating preset macro file"
+    IDS_MACRO_ERR_WRITING   "Error writing to preset macro file"
+    IDS_PRS_WINDOW_TITLE    "Presets list"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PRS_ERR_CREAT_WND   "Error creating presets list window"
+    IDS_MODIFIED_PR_NOT_SAVED 
+                            "You have modified the current preset but have not yet saved it. Do you want to save it ?"
+    IDS_PRS_ERR_DISPLAYING_LIST "Error displaying preset list"
+    IDS_PR_ERR_SENDING      "Error sending preset"
+    IDS_PR_INSTR_NONE       "None"
+    IDS_PR_ALL_WINDOW_TITLE "Preset - %s"
+    IDS_PR_MAIN_WINDOW_TITLE "Preset main - %s"
+    IDS_PR_VOICE_WINDOW_TITLE "Preset voices - %s"
+    IDS_PR_LFO_WINDOW_TITLE "Preset LFOs / AuxEnv - %s"
+    IDS_PR_FG_WINDOW_TITLE  "Preset FGs - %s"
+    IDS_PR_NO_WINDOW_TITLE  "Note-on patchbay : %s"
+    IDS_PR_RT_WINDOW_TITLE  "Real-time patchbay : %s"
+    IDS_PM_WINDOW_TITLE     "Program map"
+    IDS_PM_ERR_CREAT_WND    "Error creating program map window"
+    IDS_MODIFIED_PM_NOT_SAVED 
+                            "You have modified the program map but have not yet saved it. Do you want to save it ?"
+    IDS_PM_ERR_SENDING      "Error sending program map"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SYSEX_ERR_CREAT_WND "Error creating SYSEX (get) MIDI window"
+    IDS_SYSEX_ERR_SENDING   "Error sending SYSEX data"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
