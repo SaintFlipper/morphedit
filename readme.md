@@ -4,11 +4,11 @@ Morphedit
 Morphedit is an interactive editor for the Emu Morpheus and UltraProteus synthesisers.
 It should run on any version of Windows from Windows 95 onwards, and uses standard the Windows MM MIDI API, which still seems to work as of Windows 10.
 
-++Binaries++
+## Binaries
 
 If you just want to run Morphedit then everything needed should be in the **bin** directory, including a user manual in PDF format.
 
-++Source++
+## Source
 
 The source is obviously in **src**. It's ancient code now, all written in C (not even C++) using the raw Win32 API, and originally built using Microsoft Quick C. At some point it was ported to Visual Studio, but I'm not sure which VS version that was. It appears that as of VS 2017 it doesn't build because various  Windows headers have now been removed from the Windows SDKs.
 
