@@ -17,8 +17,7 @@ If you fancy building it on a later Visual Studio version, porting it to other p
 As basic guidance, Morphedit comprises the core morphedit.exe and two DLLs: **morphdll.dll** wraps MIDI I/O and **aucntrl.dll** contains the custom UI widgets used in the editor, for example the slider control. In source terms the DLLs are defined as projects within the workspace, and they are dependencies of the core application.
 
 
-FAQs
-====
+## FAQs
 
 The following is a totally out of date FAQ list from the original project host.
 
